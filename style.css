@@ -177,5 +177,8 @@ p.right {
 }
 
 .footer-container{
-    background-color: white;
+    background-color: #2d3185;
+    text-align: center;
+    padding: 30px;
 }
+
