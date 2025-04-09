@@ -86,99 +86,50 @@ hr {
 }
 */
 
-header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 10px;
-    background-color: #2d3185;
-}
 
-header > h1 {
-    font-family: "Montserrat", sans-serif;
-    color: bisque;
-    margin-right: auto;
-
-}
-
-
-
-.navbar{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    padding-top: 0px;
-    text-decoration: none;
-}
-
-
-
-.navbar li{
-    display: inline-block;
-    padding: 0px 0px;
-
- }
-
- .navbar li a{
-    color: beige;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
-}
-
-
-.navbar li a:hover{
-    background-color: rgba(182, 178, 178, 0.167);
-}
-
-
-
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    margin: 20px; 
-    padding: 10px; 
-    background-color: cadetblue;
-}
-img.floatLeft {
-    float: left;
-    padding: 10px;
-}
-
-p.right {
-    float: right; 
-    font-size: 20px; 
-    padding: 20px;
-}
-
-.align {
-    display: flex; 
-    align-items: center;
-    column-gap: 5px;
-    background-color: aliceblue;
-    padding:10px; 
-}
-
-.button {
-    background-color: black; 
-    border: 2 px solid black;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-.button:hover {
-    background-color: black;
-    color: white;
-}
 
 .footer-container{
     background-color: #2d3185;
     text-align: center;
     padding: 30px;
 }
+
+body {
+    background-color: #F5EDED;
+    color: #333;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+/* 🌐 Navbar Styling */
+.navbar-custom {
+    background-color: #2d3185;
+  }
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand {
+    color: white;
+  }
+  
+  /* 🦸 Hero Section */
+  .hero {
+    background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 🔥 vertical centering */
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .hero h1{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 10px 0;
+    }
 
