@@ -88,11 +88,13 @@ hr {
 
 
 
-.footer-container{
+.footer {
     background-color: #2d3185;
     text-align: center;
     padding: 30px;
-}
+    font-size: 14px;
+    color: white;
+  }
 
 body {
     background-color: #F5EDED;
