@@ -152,6 +152,10 @@ p.right {
     padding: 20px;
 }
 
+.contact {
+    text-align: center;
+}
+
 .align {
     display: flex; 
     align-items: center;
