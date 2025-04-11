@@ -56,3 +56,15 @@
     color: #666;
     margin-bottom: 5px;
 }
+
+.contact {
+    text-align: center;
+}
+
+.footer {
+    background-color: #2d3185;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: white;
+  }
