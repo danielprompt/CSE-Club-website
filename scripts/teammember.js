@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="${member.avatar}" class="member-avatar" alt="${member.name}">
                 <div class="member-name">${member.name}</div>
                 <div class="member-language">${member.language}</div>
-                <div class="member-more"><button class="btn btn-dark">${member.more}</button></div>
             `;
             teamContainer.appendChild(memberElement);
         });
