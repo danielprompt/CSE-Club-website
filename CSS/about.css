@@ -28,9 +28,8 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: flex-end;
-    gap: 20px;
     padding: 20px;
-    max-width: 500px;
+    width: 800px;
     overflow: visible; 
 }
 
