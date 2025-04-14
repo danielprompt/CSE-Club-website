@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const memberElement = document.createElement("div");
             memberElement.className = "member";
             memberElement.innerHTML = `
-                <img src="${member.image}" class="member-image" alt="${member.name}" style="max-width: 80px; border-radius: 50%;">
+                <img src="${member.image}" class="member-image" alt="${member.name}" style="max-width: 60px; border-radius: 50%;">
                 <div class="member-name">${member.name}</div>
                 <div class="member-language">${member.language}</div>
                 <div class="member-description">${member.description}</div>
