@@ -2,6 +2,20 @@
     text-align: center;
 }
 
+/*Header*/
+.navbar-custom {
+    background-color: #2d3185;
+  }
+  
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand {
+    color: white;
+  }
+  
+  .navbar-toggler {
+    border-color: white;
+  }
+
 .everyone {
     text-align: center;
     margin: 0 auto;
