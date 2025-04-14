@@ -2,6 +2,20 @@
     text-align: center;
 }
 
+/*Header*/
+.navbar-custom {
+    background-color: #2d3185;
+  }
+  
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand {
+    color: white;
+  }
+  
+  .navbar-toggler {
+    border-color: white;
+  }
+
 .everyone {
     text-align: center;
     margin: 0 auto;
@@ -9,15 +23,14 @@
     padding: 20px;
 }
 
-.team-container {
+.member-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
     gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px; 
-    max-width: 800px;
-    margin: 0 auto; 
+    padding: 20px;
+    max-width: 500px;
     overflow: visible; 
 }
 
@@ -57,6 +70,48 @@
     margin-bottom: 5px;
 }
 
+.controls {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #6d84c5;
+}
+
+.more-button {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.dot-container {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    width: 80%; 
+    max-width: 800px; 
+    margin: 20px auto;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.dot.active {
+    background-color: #534caf;
+}
 .contact {
     text-align: center;
 }

@@ -163,4 +163,40 @@ body {
 
 
 
+    .button {
+        background-color: black; 
+        border: 2 px solid black;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+      
+    .button:hover {
+        background-color: black;
+        color: white;
+      }
+
+      /* Rehana CSS */
+
+      img.floatLeft {
+        float: left;
+        padding: 10px;
+    }
+
+    p.rightText {
+        float: right; 
+        font-size: 20px; 
+        padding: 20px;
+    }
+
+    .align {
+        display: flex; 
+        align-items: center;
+        column-gap: 5px;
+        background-color: aliceblue;
+        padding:10px; 
+    }
     
