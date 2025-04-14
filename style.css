@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* 🔤 Base Styles */
 body {
   background-color: #F5EDED;
   color: #333;
@@ -11,12 +12,10 @@ body {
 .navbar-custom {
   background-color: #2d3185;
 }
-
 .navbar-custom .nav-link,
 .navbar-custom .navbar-brand {
   color: white;
 }
-
 .navbar-toggler {
   border-color: white;
 }
@@ -36,7 +35,6 @@ body {
   flex-direction: column;
   padding: 0 20px;
 }
-
 .hero h1 {
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -44,7 +42,7 @@ body {
   margin: 10px 0;
 }
 
-/*  Section Styling */
+/* 📦 Section Styling */
 .section {
   padding: 60px 20px;
 }
@@ -61,62 +59,70 @@ body {
 }
 
 /* 🦶 Footer */
-  
-  .footer{
-  background:#2d3185;
-  padding:30px 0px;
+.footer {
+  background: #2d3185;
+  padding: 30px 20px;
   font-family: 'Play', sans-serif;
-  text-align:center;
-  }
-  
-  .footer .row{
-  width:100%;
-  margin:1% 0%;
-  padding:0.6% 0%;
   color: white;
-  font-size:0.8em;
-  }
-  
-  .footer .row a{
-  text-decoration:none;
-  color: white;
-  transition:0.5s;
-  }
-  
-  .footer .row a:hover{
-  color: grey;
-  }
-  
-  .footer .row ul{
-  width:100%;
-  }
-  
-  .footer .row ul li{
-  display:inline-block;
-  margin:0px 30px;
-  }
-  
-  .footer .row a i{
-  font-size:2em;
-  margin:0% 1%;
-  }
-  
-  @media (max-width:720px){
-  .footer{
-  text-align:left;
-  padding:5%;
-  }
-  .footer .row ul li{
-  display:block;
-  margin:10px 0px;
-  text-align:left;
-  }
-  .footer .row a i{
-  margin:0% 3%;
-  }
-  }
+  text-align: center;
+}
 
-/* 🔘 Button */
+/* 📱 Footer Social Media Icons */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.footer-icons a {
+  color: white;
+  font-size: 2em;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.footer-icons a:hover {
+  color: grey;
+}
+
+/* 🧭 Footer Navigation Links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+.footer-links ul li a:hover {
+  color: grey;
+}
+
+/* © Copyright Text */
+.footer-copy {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+/* 📱 Responsive Footer */
+@media (max-width: 720px) {
+  .footer-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .footer-links ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* 🔘 Buttons */
 .button {
   background-color: black;
   border: 2px solid black;
@@ -126,77 +132,27 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
 }
-
 .button:hover {
   background-color: black;
   color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .button {
-        background-color: black; 
-        border: 2 px solid black;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
-      
-    .button:hover {
-        background-color: black;
-        color: white;
-      }
-
-      /* Rehana CSS */
-
-      img.floatLeft {
-        float: left;
-        padding: 10px;
-    }
-
-    p.rightText {
-        float: right; 
-        font-size: 20px; 
-        padding: 20px;
-    }
-
-    .align {
-        display: flex; 
-        align-items: center;
-        column-gap: 5px;
-        background-color: aliceblue;
-        padding:10px; 
-    }
-    
+/* 👩‍🎓 Rehana’s Section */
+img.floatLeft {
+  float: left;
+  padding: 10px;
+}
+p.rightText {
+  float: right;
+  font-size: 20px;
+  padding: 20px;
+}
+.align {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  background-color: aliceblue;
+  padding: 10px;
+}
