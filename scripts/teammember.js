@@ -3,55 +3,46 @@ const everyone = [
         name: "Dimitri",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
         language: "Java, HTML, CSS, JavaScript",
-        more: "More"
     },
     {
         name: "Christine",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
     {
         name: "Rehana",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
     {
         name: "Sim",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
     {
         name: "Tayena",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
     {
         name: "Daniel",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
     {
         name: "Ishmael",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
     {
         name: "Jingkang",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
     {
         name: "Mahmoud",
         avatar: "https://pm1.narvii.com/6512/1f58cc93200885080ae84a4ec582bf01704a1db5_hq.jpg",
-        language: "Java, HTML, CSS, JavaScript",
-        more: "More"
+        language: "Java, HTML, CSS, JavaScript"
     },
 ];
 
