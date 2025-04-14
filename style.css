@@ -44,6 +44,22 @@ body {
   margin: 10px 0;
 }
 
+/* Project Section Styling */
+.section {
+  padding: 60px 20px;
+}
+.zigzag:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.zigzag img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.section-title {
+  font-weight: bold;
+  color: #6482AD;
+}
+
 /* 🦶 Footer */
 .footer {
   background-color: #2d3185;
@@ -69,5 +85,35 @@ body {
   background-color: black;
   color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
