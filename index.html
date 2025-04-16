@@ -13,6 +13,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
+  <script src="/scripts/teammember.js"></script>
+
 </head>
 
 <body>
@@ -118,6 +120,23 @@
         </div>
       </div>
     </div>
+
+      <!-- Team Carousel Section -->
+  <section class="section bg-white" id="team">
+    <div class="container">
+      <div class="team-carousel-wrapper overflow-hidden">
+        <div id="teamSlider" class="d-flex transition-slider">
+          <!-- Team members carousel -->
+          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Daniel</strong><br/>President</p></div>
+          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Serena</strong><br/>Vice President</p></div>
+          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Tayena</strong><br/>Secretary</p></div>
+          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Sim</strong><br/>Goat</p></div>
+          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>John Cena</strong><br/>Invisible</p></div>
+          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Max</strong><br/>Designer</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
   </section>
 
 
@@ -146,5 +165,25 @@
       <p>&copy; 2025 Computer Science & Engineering Club. All rights reserved.</p>
     </div>
   </footer>
+
+
+  <script>
+    const slider = document.getElementById("teamSlider");
+    const transitionDuration = 5;
+    const interval = 10000; // 10 seconds
+    function slideOneMember() {
+    slider.style.transition = `transform ${transitionDuration}s ease-in-out`;
+    slider.style.transform = "translateX(-33.3333%)";
+    slider.addEventListener("transitionend", function handler() {
+    slider.style.transition = "none";
+    const first = slider.children[0];
+    slider.appendChild(first);
+    slider.style.transform = "translateX(0)";
+    slider.removeEventListener("transitionend", handler);
+  });
+}
+setInterval(slideOneMember, interval);
+  </script>
 </body>
+
 </html>

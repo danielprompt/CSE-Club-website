@@ -58,6 +58,30 @@ body {
   color: #2d3185;
 }
 
+/* 🎠 Team Carousel */
+.team-carousel {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  height: auto;
+}
+.transition-slider {
+  transition: transform 3s ease-in-out;
+}
+.team-carousel-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+#teamSlider {
+  display: flex;
+  transition: transform 10s ease-in-out;
+}
+.team-member {
+  width: 33.3333%;
+  flex-shrink: 0;
+}
+
 /* 🦶 Footer */
 .footer {
   background: #2d3185;
