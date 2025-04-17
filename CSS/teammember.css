@@ -12,20 +12,21 @@ body {
 .navbar-custom {
     background-color: #2d3185;
 }
-  .navbar-custom .nav-link,
-  .navbar-custom .navbar-brand {
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
     color: white;
 }
 .navbar-toggler {
     border-color: white;
 }
 
+/* Member Styling*/
 .member-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    gap: 5px;
-    max-width: 800px;
+    justify-content: center;
+    gap: 10px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -37,9 +38,9 @@ body {
     max-width: 150px;
 }
 
-.member-card:hover {
+/*.member-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 #member-img {
     border-radius: 360px;
