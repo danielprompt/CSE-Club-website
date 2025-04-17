@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 🔤 Base Styles */
 body {
-    font-family: Segoe UI, sans-serif;
-    text-align: center;
-    background-color: beige;
+    background-color: #F5EDED;
+    color: #333;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+/* 🌐 Navbar Styling */
+.navbar-custom {
+    background-color: #2d3185;
+}
+  .navbar-custom .nav-link,
+  .navbar-custom .navbar-brand {
+    color: white;
+}
+.navbar-toggler {
+    border-color: white;
 }
 
 .member-row {
@@ -27,4 +43,85 @@ body {
 
 #member-img {
     border-radius: 360px;
+}
+
+/* 🦶 Footer */
+.footer {
+    background: #2d3185;
+    padding: 30px 20px;
+    font-family: 'Play', sans-serif;
+    color: white;
+    text-align: center;
+}
+  
+/* 📱 Footer Social Media Icons */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.footer-icons a {
+    color: white;
+    font-size: 2em;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+.footer-icons a:hover {
+    color: grey;
+}
+  
+/* 🧭 Footer Navigation Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+.footer-links ul li a:hover {
+    color: grey;
+}
+  
+/* © Copyright Text */
+.footer-copy {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+  
+/* 📱 Responsive Footer */
+@media (max-width: 720px) {
+    .footer-icons {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .footer-links ul li {
+      display: block;
+      margin: 10px 0;
+    }
+}
+
+/* 🔘 Buttons */
+.button {
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button:hover {
+    background-color: black;
+    color: white;
 }
