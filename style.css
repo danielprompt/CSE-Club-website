@@ -226,3 +226,38 @@ p.rightText {
   color: #ccc;
   transform: translateX(-5px);
 }
+
+.dev-credits {
+  font-size: 0.9em;
+  color: #ccc;
+  font-family: 'Play', sans-serif;
+  text-align: left;
+}
+
+.dev-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 6px 20px;
+}
+
+.dev-grid p {
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.dev-grid p:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* 📱 Stack to 1 column on smaller screens */
+@media (max-width: 768px) {
+  .dev-credits {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .dev-grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
