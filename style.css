@@ -229,7 +229,7 @@ p.rightText {
 
 .dev-credits {
   font-size: 0.9em;
-  color: #ccc;
+  color: white;
   font-family: 'Play', sans-serif;
   text-align: left;
 }
@@ -246,7 +246,7 @@ p.rightText {
 }
 
 .dev-grid p:hover {
-  color: white;
+  color: #ccc;
   transform: translateX(5px);
 }
 
