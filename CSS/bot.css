@@ -1,0 +1,192 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  .message {
+    max-width: 80%;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .user-message {
+    background-color: #e0f7fa;
+    color: #00897b;
+    margin-left: auto;
+  }
+  .bot-message {
+    background-color: #f0f4c3;
+    color: black;
+    margin-right: auto;
+  }
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  #user-input {
+    flex-grow: 1;
+    border-radius: 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e0e0;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  #user-input:focus {
+    outline: none;
+    border-color: #4dd0e1;
+    box-shadow: 0 0 0 3px rgba(62, 231, 219, 0.16);
+  }
+  #send-button {
+    background-color: blue;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.25rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  #send-button:hover {
+    background-color: blue;
+  }
+  #send-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(62, 231, 219, 0.3);
+  }
+  .chat-container {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+  }
+  .chat-container::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  .chat-container::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 1.25rem;
+  }
+  .chat-container::-webkit-scrollbar-thumb {
+    background-color: #b0bec5;
+    border-radius: 1.25rem;
+  }
+  .chat-container::-webkit-scrollbar-thumb:hover {
+    background-color: #78909c;
+  }
+  .typing-indicator {
+    background-color: #e0f7fa;
+    color: #00897b;
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite;
+    margin-left: auto;
+  }
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+  
+  /* New styles for the pop-up */
+  #chat-popup {
+    display: none; /* Initially hidden */
+    position: fixed; /* Use fixed positioning */
+    bottom: 80px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 10; /* Ensure it's above other elements */
+    width: 350px; /* Width of the popup */
+    max-height: 90vh;
+    background-color: white;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    overflow: hidden; /* Clip the rounded corners of the content */
+    transform: translateY(20px); /* Start slightly below its final position */
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  #chat-popup.show {
+    display: flex; /* Show the popup */
+    flex-direction: column;
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to its final position */
+  }
+  
+  #chat-popup-header {
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid #b2ebf2;
+  }
+  
+  #chat-popup-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #chat-popup-footer {
+    padding: 1rem;
+    border-top: 1px solid #b2ebf2;
+  }
+  
+  #chat-icon {
+    position: fixed; /* Fix the icon to the corner */
+    bottom: 20px;
+    right: 20px;
+    z-index: 11; /* Sit on top of everything */
+    background-color: white;
+    color: white;
+    width: 60px; /* Increased size for better touch target */
+    height: 60px;
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  #chat-icon:hover {
+    background-color: grey; /* Darker cyan on hover */
+  }
+  
+  #chat-icon img {
+    width: 50px; /* Size of the chat icon inside the button */
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    #chat-popup {
+        width: 95%;
+        bottom: 10px;
+        right: 5%;
+        left: 5%;
+    }
+    .input-container {
+        flex-direction: column;
+    }
+    #user-input {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        border-radius: 0.75rem;
+        padding: 1rem; /* Increased padding for input on small screens */
+        font-size: 1.1rem;
+    }
+    #send-button {
+        width: 100%;
+        border-radius: 0.75rem;
+        padding: 1rem; /* Increased padding for button on small screens */
+        font-size: 1.1rem;
+    }
+    #chat-icon {
+        bottom: 10px;
+        right: 10px;
+    }
+  }
