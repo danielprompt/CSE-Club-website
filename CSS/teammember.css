@@ -21,36 +21,60 @@ body {
 }
 
 /* Member Styling*/
-.member-row {
+
+.officers{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
-    max-width: 800px;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.member-card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: 0.4s;
-    border-radius: 10px;
-    background-color: white;
-    max-width: 150px;
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
-#member-img {
-    border-radius: 10px 10px 0 0;
+.card-flip {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
 }
 
-.member-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container {
-    padding: 1px 16px;
+.card-flip:hover .card-inner {
+    transform: rotateY(180deg);
 }
 
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 
+.card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.card-back {
+    background-color: #7378da;
+    color: black;
+    transform: rotateY(180deg);
+}
 
 /* 🦶 Footer */
 .footer {
