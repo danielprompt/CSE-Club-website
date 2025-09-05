@@ -1,28 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSE Club</title>
-
-
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="./style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
-  <script src="/scripts/teammember(old).js"></script>
-
-</head>
-
-
-
-<!-- Here is the CSS for the club faq bot -->
-
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club FAQ Bot</title>
+    <style>
         /* CSS for the Bot Icon */
         .faq-bot-icon {
             position: fixed;
@@ -30,7 +12,7 @@
             right: 20px;
             width: 70px;
             height: 60px;
-            background-color: white;
+            background-color: black;
             color: white;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -43,9 +25,9 @@
         }
 
         .faq-bot-icon img {
-            padding-left: 30px;
+            padding-left: 35px;
             padding-bottom: 20px;
-            width: 165%;
+            width: 150%;
             height: 150%;
             border-radius: 50%;
         }
@@ -222,129 +204,10 @@
         }
 
     </style>
-
+</head>
 <body>
-  <!-- 🌐 Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../CSE-Club-website/index.html">Computer Science & Engineering Club</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
-          <li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/Page/teammember.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://engage.ctstate.edu/organization/macsec" target="_blank">Join Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- 🦸 Hero Section -->
-  <header class="hero">
-    <div class="club-title-elegant text-center position-relative">
-      <h1>Computer Science</h1>
-      <h1>&</h1>
-      <h1>Engineering</h1>
-      <h1>Club</h1>
-    </div>
-  </header>
-
-  <!-- 🎯 Mission Section -->
-  <section class="section bg-white" id="mission">
-    <div class="container">
-      <h2 class="section-title text-center">Our Mission and Story</h2>
-      <hr />
-      <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
-        <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="Project Showcase" />
-        <div>
-          <p>We started this club to bring tech-savvy students together and make cool stuff happen. Our mission is simple: build fun projects, learn by doing, and support each other as we grow our skills. Whether it’s coding, circuits, or crazy ideas, we’re all about hands-on learning and creativity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🛠️ Projects Section -->
-  <section class="section bg-light" id="projects">
-    <div class="container px-0">
-      <h2 class="section-title text-center">Projects</h2>
-      <hr />
-
-      <!-- Project 1 -->
-      <div class="row align-items-center flex-md-row-reverse g-0" style="min-height: 60vh;">
-        <div class="col-md-6">
-          <img src="/Assets/YoloPi.png" alt="Node.js Chatbot" class="img-fluid w-100 h-100 object-fit-cover" />
-        </div>
-        <div class="col-md-6 p-5">
-          <h2 class="fw-bold">Rasberry Pi and Object Detection</h2>
-          <p>This project uses a Raspberry Pi, AI camera module, and YOLOv8 to detect and count people in real-time. The live video feed is streamed securely over the internet and can be controlled remotely.</p>
-          <a href="https://simr29.org" target="_blank" class="btn btn-dark" target="_blank">View Project</a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="row align-items-center g-0" style="min-height: 60vh;">
-        <div class="col-md-6">
-          <img src="/Assets/car.jpg" alt="Arduino Project" class="img-fluid w-100 h-100 object-fit-cover" />
-        </div>
-        <div class="col-md-6 p-5">
-          <h2 class="fw-bold">Arduino Car</h2>
-          <p>An Arduino-powered Bluetooth car that responds to joystick input from a mobile app. It features directional control, custom speed logic, and additional features like horn via button commands</p>
-          <a href="project1.html" class="btn btn-dark" target="_blank">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 👥 About Us Section -->
-  <!-- <section id="aboutUs">
-    <h3 class="section-title text-center">Our Mission and Story</h3>
-    <hr />
-    <div class="align">
-      <div>
-        <img class="floatLeft" src="Assets/chex.jpg" width="300" alt="Team Image" />
-      </div>
-      <div class="rightText">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error molestiae a eaque accusamus doloremque animi obcaecati temporibus tempore. Consequatur ad illum odit molestias suscipit! Consectetur quasi sint aut commodi laborum.</p>
-        <a href="Page/about.html"><button class="btn btn-dark">Learn More</button></a>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="section bg-white" id="aboutUs">
-    <div class="container">
-      <h2 class="section-title text-center">About Us</h2>
-      <hr />
-      <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
-        <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="Team Image" />
-        <div class="text-center">
-          <p>We are a community of students passionate about coding, robotics, and problem-solving. Our club provides a space to build real-world skills through team-based projects, workshops, and competitions. Whether you're a beginner or experienced, we welcome anyone curious about the world of computer science and engineering.</p>
-          <a href="Page/about.html"><button class="btn btn-dark">Learn More</button></a>
-        </div>
-      </div>
-    </div>
-
-      <!-- Team Carousel Section -->
-  <section class="section bg-white" id="team">
-    <div class="container">
-      <div class="team-carousel-wrapper overflow-hidden">
-        <div id="teamSlider" class="d-flex transition-slider">
-          <!-- Team members carousel -->
-          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Daniel</strong><br/>Human</p></div>
-          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Serena</strong><br/>Human</p></div>
-          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Tayena</strong><br/>Human</p></div>
-          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Sim</strong><br/>Human</p></div>
-          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>John Cena</strong><br/>Human</p></div>
-          <div class="team-member text-center px-3"><img src="https://i.imgflip.com/4/4t0m5.jpg" class="img-thumbnail mb-2"><p><strong>Dimitri</strong><br/>Human</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- Faq bot html code -->
-  <div class="faq-bot-icon" id="faq-bot-icon">
+<div class="faq-bot-icon" id="faq-bot-icon">
     <img src="../Assets/hokage.png" alt="FAQ Bot logo"> 
 </div>
 
@@ -364,74 +227,7 @@
 
 </div>
 
-  </section>
-
-
-
-  <footer class="footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start flex-wrap">
-      
-      <div class="text-center mx-auto order-2 order-md-1">
-        <div class="footer-icons mb-3">
-          <a href="https://discord.gg/bEuBuyv87N"><i class="fab fa-discord"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-tiktok"></i></a>
-        </div>
-  
-        <div class="footer-links mb-2">
-          <ul>
-            <li><a href="#">Project</a></li>
-            <li><a href="#aboutUs">About Us</a></li>
-            <li><a href="/Page/about.html">Team</a></li>
-            <li><a href="https://engage.ctstate.edu/organization/macsec" target="_blank">Join Us</a></li>
-          </ul>
-        </div>
-  
-        <div class="footer-copy">
-          <p>&copy; 2025 Computer Science & Engineering Club. All rights reserved.</p>
-        </div>
-      </div>
-  
-      <div class="dev-credits order-1 order-md-2 mt-4 mt-md-0">
-        <p class="fw-bold mb-2">Developers :</p>
-        <div class="dev-grid">
-          <p>‣ Rehana </p>
-          <p>‣ Sim</p>
-          <p>‣ Daniel</p>
-          <p>‣ Ishmael</p>
-          <p>‣ Tayena</p>
-          <p>‣ Dimitri</p>
-          <p>‣ Christina</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-  
-  <script>
-    const slider = document.getElementById("teamSlider");
-    const transitionDuration = 5;
-    const interval = 10000; // 10 seconds
-    function slideOneMember() {
-    slider.style.transition = `transform ${transitionDuration}s ease-in-out`;
-    slider.style.transform = "translateX(-33.3333%)";
-    slider.addEventListener("transitionend", function handler() {
-    slider.style.transition = "none";
-    const first = slider.children[0];
-    slider.appendChild(first);
-    slider.style.transform = "translateX(0)";
-    slider.removeEventListener("transitionend", handler);
-  });
-}
-setInterval(slideOneMember, interval);
-  </script>
-  <!-- Faq bot java script -->
-  <script>
+<script>
     // Get all the elements we need
     const botIcon = document.getElementById('faq-bot-icon');
     const chatWindow = document.getElementById('faq-chat-window');
@@ -585,5 +381,4 @@ setInterval(slideOneMember, interval);
 </script>
 
 </body>
-
 </html>
