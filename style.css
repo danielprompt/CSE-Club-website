@@ -66,7 +66,7 @@ body {
   height: auto;
 }
 .transition-slider {
-  transition: transform 3s ease-in-out;
+  transition: transform 2s ease-in-out;
 }
 .team-carousel-wrapper {
   max-width: 1000px;
