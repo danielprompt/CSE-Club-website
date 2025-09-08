@@ -75,7 +75,7 @@ body {
 }
 #teamSlider {
   display: flex;
-  transition: transform 10s ease-in-out;
+  transition: transform 4s ease-in-out;
 }
 .team-member {
   width: 33.3333%;
