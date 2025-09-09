@@ -18,6 +18,18 @@
     text-align: center;
 }
 
+
+.historysize
+{
+  width: 380px;
+  height: auto;
+}
+
+.purposesize
+{
+  width: 300px;
+  height: auto;
+}
 /* Officer Section */
 .officer-row {
   display: flex;
