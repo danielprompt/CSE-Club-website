@@ -20,6 +20,16 @@
       background-color: #f9f9f9;
       font-family: "Segoe UI", sans-serif;
     }
+    .navbar-custom {
+      background-color: #2d3185;
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: white;
+    }
+    .navbar-toggler {
+      border-color: white;
+    }
     .hero {
       background: #222;
       color: white;
@@ -43,6 +53,61 @@
       max-height: 300px;
       object-fit: cover;
       border-radius: 8px;
+    }
+    .footer {
+      background: #2d3185;
+      padding: 30px 20px;
+      font-family: 'Play', sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+    .footer-icons a {
+      color: white;
+      font-size: 2em;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+    .footer-icons a:hover {
+      color: grey;
+    }
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    .footer-links ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.3s;
+    }
+    .footer-links ul li a:hover {
+      color: grey;
+    }
+    .footer-copy {
+      margin-top: 20px;
+      font-size: 0.8em;
+    }
+
+    @media (max-width: 720px) {
+      .footer-icons {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .footer-links ul li {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -170,8 +235,8 @@ void handleJoystick(String input) {
           <ul>
             <li><a href="#">Project</a></li>
             <li><a href="#aboutUs">About Us</a></li>
-            <li><a href="/Page/about.html">Team</a></li>
-            <li><a href="https://forms.gle/vMEzDg3bbYbUMnUZ7" target="_blank">Join Us</a></li>
+            <li><a href="/Page/teammember.html">Team</a></li>
+            <li><a href="https://engage.ctstate.edu/organization/macsec" target="_blank">Join Us</a></li>
           </ul>
         </div>
   
@@ -190,7 +255,6 @@ void handleJoystick(String input) {
           <p>‣ Tayena</p>
           <p>‣ Dimitri</p>
           <p>‣ Christina</p>
-          <p>‣ Trump</p>
         </div>
       </div>
     </div>
