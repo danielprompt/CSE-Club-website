@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CSE Club</title>
 
-
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="./style.css" />
+  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
-  <script src="/scripts/teammember(old).js"></script>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <!-- 🌐 Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="../CSE-Club-website/index.html">Computer Science & Engineering Club</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,14 +28,14 @@
           <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
           <li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="../Page/teammember.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://engage.ctstate.edu/organization/macsec" target="_blank">Join Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../Page/teammember.html">Member</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://engage.ctstate.edu/organization/macsec" target="_blank" rel="noopener">Join Us</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- 🦸 Hero Section -->
+  <!-- 🦸 Hero -->
   <header class="hero">
     <div class="club-title-elegant text-center position-relative">
       <h1>Computer Science</h1>
@@ -48,148 +45,186 @@
     </div>
   </header>
 
-  <!-- 🎯 Mission Section -->
-  <section class="section bg-white" id="mission">
-    <div class="container">
-      <h2 class="section-title text-center">Our Mission and Story</h2>
-      <hr />
-      <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
-        <img src="./Assets/finalmissionImg.png" alt="Project Showcase" style="width:360px; height:360px;"/>
-        <div>
-          <p>We started this club to bring tech-savvy students together and make cool stuff 
-            happen. Our mission is simple: build fun projects, learn by doing, and support each 
-            other as we grow our skills. Whether it’s coding, circuits, or crazy ideas, we’re all 
-            about hands-on learning and creativity.</p>
-        </div>
+<!-- 🎯 Mission -->
+<section class="section bg-white" id="mission">
+  <div class="container">
+    <h2 class="section-title text-center">Our Purpose</h2>
+    <hr />
+    <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
+      <img src="./Assets/finalmissionImg.png" alt="Mission graphic" class="rounded missionImg" width="360" height="360" />
+      <div class="d-flex flex-column align-items-center text-center text-md-start">
+        <p style="text-align: center" class="mb-3" style="max-width: 600px;">
+          The Computer Science & Engineering Club was founded to bring together students who love building, designing, and innovating with technology. We meet in Room C135 every Monday and Wednesday from 12:30 PM to 2:00 PM, where ideas quickly turn into projects. From programming with Arduino and Raspberry Pi to developing our own Unity-based game, every meeting is about learning by doing.
+          Our purpose is to create an open, collaborative space for students of all experience levels to explore computer science and engineering beyond the classroom. We encourage creativity, experimentation, and teamwork—helping members gain skills that last long after college.
+        </p>
+        <a href="Page/about.html" class="btn btn-dark mt-3">Learn More</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 🛠️ Projects Section -->
+
+  <!-- 🛠️ Projects -->
   <section class="section bg-light" id="projects">
     <div class="container px-0">
       <h2 class="section-title text-center">Projects</h2>
       <hr />
 
       <!-- Project 1 -->
-      <div class="row align-items-center g-0" style="min-height: 60vh;">
+      <div class="row align-items-center g-0" style="min-height:60vh;">
         <div class="col-md-6">
-          <img src="/Assets/car.jpg" alt="Arduino Project" class="img-fluid w-100 h-100 object-fit-cover" />
+          <img src="/Assets/car.jpg" alt="Arduino Car" class="img-fluid w-75 h-75 object-fit-cover" />
         </div>
         <div class="col-md-6 p-5">
-          <h2 class="fw-bold">Arduino Car</h2>
-          <p>An Arduino-powered Bluetooth car that responds to joystick input from a mobile app. 
-            It features directional control, custom speed logic, and additional features like 
-            horn via button commands</p>
-          <a href="Page/project1.html" class="btn btn-dark" target="_blank">View Project</a>
+          <h3 class="fw-bold">Arduino Car</h3>
+          <p>
+            An Arduino-powered Bluetooth car that responds to joystick input from a mobile app. It features directional control,
+            custom speed logic, and extras like horn via button commands.
+          </p>
+          <a href="Page/project1.html" class="btn btn-dark" target="_blank" rel="noopener">View Project</a>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Project 2 -->
+      <div class="row align-items-center g-0" style="min-height:60vh;">
+        <div class="col-md-6">
+          <img src="" alt="Racing game" class="img-fluid w-75 h-75 object-fit-cover" />
+        </div>
+        <div class="col-md-6 p-5">
+          <h3 class="fw-bold">Racing Game</h3>
+          <p>
+            Racing game made with unity engine. The game features multiple levels and customizable vehicles for an engaging experience.
+          </p>
+          <a href="Page/project1.html" class="btn btn-dark" target="_blank" rel="noopener">View Project</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 👥 About Us Section -->
-  <!-- <section id="aboutUs">
-    <h3 class="section-title text-center">Our Mission and Story</h3>
-    <hr />
-    <div class="align">
-      <div>
-        <img class="floatLeft" src="Assets/chex.jpg" width="300" alt="Team Image" />
-      </div>
-      <div class="rightText">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error molestiae a eaque accusamus doloremque animi obcaecati temporibus tempore. Consequatur ad illum odit molestias suscipit! Consectetur quasi sint aut commodi laborum.</p>
-        <a href="Page/about.html"><button class="btn btn-dark">Learn More</button></a>
-      </div>
-    </div>
-  </section> -->
-
+  <!-- 👥 About Us -->
   <section class="section bg-white" id="aboutUs">
     <div class="container">
-      <h2 class="section-title text-center">About Us</h2>
+      <h2 class="section-title text-center">What We Do</h2>
       <hr />
       <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
-        <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="Team Image" />
-        <div class="text-center">
-          <p>We are a community of students passionate about coding, robotics, and problem-solving. 
-            Our club provides a space to build real-world skills through team-based projects, 
-            workshops, and competitions. Whether you're a beginner or experienced, we welcome anyone 
-            curious about the world of computer science and engineering.</p>
-          <a href="Page/about.html"><button class="btn btn-dark">Learn More</button></a>
+        <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="Team" class="rounded aboutimage" width="360" height="240" />
+        <div class="text-center text-md-start d-flex flex-column align-items-center">
+          <p style="text-align: center">
+            At the CSE Club, we focus on building projects that challenge us and inspire others. Our members work on interactive web apps, AI experiments, hardware prototypes, and our ongoing Unity game project. Every semester, we brainstorm new ideas, divide into teams, and turn those ideas into working results.
+            Alongside development, we host skill-building sessions, coding discussions, and mini-workshops where members can learn something new in a supportive environment. Whether you’re interested in programming, game development, or electronics, there’s always a place to contribute and grow.
+          </p>
+          <a href="Page/about.html" class="btn btn-dark mt-3">Learn More</a>
         </div>
+
       </div>
     </div>
+  </section>
 
-      <!-- Team Carousel Section -->
+  <!-- 👩‍💻 Team (cards grid) -->
   <section class="section bg-white" id="team">
     <div class="container">
-      <h2 class="section-title text-center">Development Contributors</h2>
+      <h2 class="section-title text-center">Executives</h2>
       <hr />
-      <div class="team-carousel-wrapper overflow-hidden">
-        <div id="teamSlider" class="d-flex transition-slider">
-          <!-- Team members carousel -->
-          <div class="team-member text-center px-3"><img src="./Assets/daniel.jpg" class="img-thumbnail mb-2" style="height: 300px; width: 300px;"><p><strong>Daniel</strong><br/>President</p></div>
-          <div class="team-member text-center px-3"><img src="./Assets/Rehana.png" class="img-thumbnail mb-2" style="height: 300px; width: 300px;"><p><strong>Rehana</strong><br/>Vice President</p></div>
-          <div class="team-member text-center px-3"><img src="./Assets/dimitri.jpg" class="img-thumbnail mb-2" style="height: 300px; width: 300px;"><p><strong>Dimitri</strong><br/>Secretary</p></div>
-          <div class="team-member text-center px-3"><img src="./Assets/Tayena.png" class="img-thumbnail mb-2" style="height: 300px; width: 300px;"><p><strong>Tayena</strong><br/>Treasurer</p></div>
-          <div class="team-member text-center px-3"><img src="./Assets/Sim.jpg" class="img-thumbnail mb-2" style="height: 300px; width: 300px;"><p><strong>Sim</strong><br/>Member</p></div>
-          <div class="team-member text-center px-3"><img src="./Assets/person2.png" class="img-thumbnail mb-2" style="height: 300px; width: 300px;"><p><strong>Christine</strong><br/>Member></p></div>
+
+      <!-- New responsive CSS GRID layout -->
+      <div class="team-grid">
+        <!-- Card template: duplicate and edit name/role/img as needed -->
+
+        <div class="team-card">
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="./Assets/daniel.jpg" alt="Daniel" />
+            </div>
+            <p class="text-blk name">Daniel</p>
+            <p class="text-blk position">President</p>
+            <p class="text-blk feature-text">??</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="./Assets/Rehana.png" alt="Rehana" />
+            </div>
+            <p class="text-blk name">Rehana</p>
+            <p class="text-blk position">Vice President</p>
+            <p class="text-blk feature-text">??</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="./Assets/dimitri.jpg" alt="Dimitri" />
+            </div>
+            <p class="text-blk name">Dimitri</p>
+            <p class="text-blk position">Secretary</p>
+            <p class="text-blk feature-text">??</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="card">
+            <div class="team-image-wrapper">
+              <img class="team-member-image" src="./Assets/Tayena.png" alt="Tayena" />
+            </div>
+            <p class="text-blk name">Tayena</p>
+            <p class="text-blk position">Treasurer</p>
+            <p class="text-blk feature-text">??</p>
+          </div>
+        </div>
         </div>
       </div>
     </div>
   </section>
-<!-- Faq bot html code -->
-  <div class="faq-bot-icon" id="faq-bot-icon">
-    <img src="../Assets/hokage.png" alt="FAQ Bot logo"> 
-</div>
 
-<div class="faq-chat-window" id="faq-chat-window">
+  <!-- 🤖 FAQ Bot -->
+  <div class="faq-bot-icon" id="faq-bot-icon" aria-label="Open Helper Hokage chat" role="button" tabindex="0">
+    <img src="../Assets/hokage.png" alt="FAQ Bot logo" />
+  </div>
+
+  <div class="faq-chat-window" id="faq-chat-window" aria-live="polite">
     <div class="chat-header">
-        <h3>Helper Hokage</h3>
-        <button class="chat-close-btn" id="chat-close-btn">&times;</button>
+      <h3 class="m-0">Helper Hokage</h3>
+      <button class="chat-close-btn" id="chat-close-btn" aria-label="Close chat">&times;</button>
     </div>
     <div class="chat-body" id="chat-body">
-        <div class="bot-message">Hello! I'm here to help with questions about our club. What would you like to know?</div>
+      <div class="bot-message">Hello! I'm here to help with questions about our club. What would you like to know?</div>
     </div>
-    
     <div class="chat-input" id="chat-input-container">
-        <input type="text" id="user-input" placeholder="Say 'hi' to begin..." autocomplete="off">
-        <button id="send-btn">Send</button>
+      <input type="text" id="user-input" placeholder="Say 'hi' to begin..." autocomplete="off" />
+      <button id="send-btn" class="btn btn-primary">Send</button>
     </div>
+  </div>
 
-</div>
-
-  </section>
-
-
-
+  <!-- 🦶 Footer -->
   <footer class="footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start flex-wrap">
-      
       <div class="text-center mx-auto order-2 order-md-1">
         <div class="footer-icons mb-3">
-          <a href="https://discord.gg/bEuBuyv87N"><i class="fab fa-discord"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://discord.gg/bEuBuyv87N" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         </div>
-  
         <div class="footer-links mb-2">
           <ul>
-            <li><a href="#">Project</a></li>
+            <li><a href="#projects">Project</a></li>
             <li><a href="#aboutUs">About Us</a></li>
             <li><a href="/Page/about.html">Team</a></li>
-            <li><a href="https://engage.ctstate.edu/organization/macsec" target="_blank">Join Us</a></li>
+            <li><a href="https://engage.ctstate.edu/organization/macsec" target="_blank" rel="noopener">Join Us</a></li>
           </ul>
         </div>
-  
         <div class="footer-copy">
           <p>&copy; 2025 Computer Science & Engineering Club. All rights reserved.</p>
         </div>
       </div>
-  
       <div class="dev-credits order-1 order-md-2 mt-4 mt-md-0">
-        <p class="fw-bold mb-2">Developers :</p>
+        <p class="fw-bold mb-2">Web Developers :</p>
         <div class="dev-grid">
-          <p>‣ Rehana </p>
+          <p>‣ Rehana</p>
           <p>‣ Sim</p>
           <p>‣ Daniel</p>
           <p>‣ Ishmael</p>
@@ -200,32 +235,18 @@
       </div>
     </div>
   </footer>
-  
 
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+  <script>
+    /* ============================
+       FAQ BOT (vanilla JS)
+       - Starts hidden; click floating button to toggle
+       - Type 'hi' or 'hello' to see options
+    ============================ */
 
-  
-  <script>
-    const slider = document.getElementById("teamSlider");
-    const transitionDuration = 5;
-    const interval = 10000; // 10 seconds
-    function slideOneMember() {
-    slider.style.transition = `transform ${transitionDuration}s ease-in-out`;
-    slider.style.transform = "translateX(-33.3333%)";
-    slider.addEventListener("transitionend", function handler() {
-    slider.style.transition = "none";
-    const first = slider.children[0];
-    slider.appendChild(first);
-    slider.style.transform = "translateX(0)";
-    slider.removeEventListener("transitionend", handler);
-  });
-}
-setInterval(slideOneMember, interval);
-  </script>
-  <!-- Faq bot java script -->
-  <script>
-    // Get all the elements we need
+    // DOM refs (guarded lookups)
     const botIcon = document.getElementById('faq-bot-icon');
     const chatWindow = document.getElementById('faq-chat-window');
     const closeBtn = document.getElementById('chat-close-btn');
@@ -234,149 +255,115 @@ setInterval(slideOneMember, interval);
     const chatBody = document.getElementById('chat-body');
     const chatInputContainer = document.getElementById('chat-input-container');
 
-    // Sample FAQ data with questions as keys and answers as values
+    // FAQs
     const faqs = {
-        "what are your hours": "Our club is open from 12:30pm to 2:00pm, Mondays and Wednesdays.",
-        "where are you located": "During the hours of 12:30pm to 2:00pm, we are located in the A121, in the library.",
-        "how do i join the club": "You can join by simply clicking the 'join us' on the header, to be directed to the engage website request page.",
-        "what events are coming up": "No events at the moment, but stay tuned! We will be announcing events soon.",
-        "what is the membership fee": "No membership fee required, just ensure that you are homed at the Manchester Campus and have a gpa above 2.5."
+      'what are your hours': "Our club is open from 12:30pm to 2:00pm, Mondays and Wednesdays.",
+      'where are you located': "During those hours, we are in A121 (Library).",
+      'how do i join the club': "Click 'Join Us' in the header to go to Engage and request membership.",
+      'what events are coming up': "No events at the moment, but stay tuned!",
+      'what is the membership fee': "No fee. You must be homed at Manchester campus and have a GPA above 2.5."
     };
 
-    // This data structure defines the options that will be displayed
     const optionLists = {
-        initial: [
-            "what are your hours",
-            "where are you located",
-            "how do i join the club",
-            "what events are coming up",
-            "what is the membership fee"
-        ],
-        followUp: [
-            "ask another question",
-            "end conversation"
-        ]
+      initial: [
+        'what are your hours',
+        'where are you located',
+        'how do i join the club',
+        'what events are coming up',
+        'what is the membership fee'
+      ],
+      followUp: ['ask another question', 'end conversation']
     };
 
-    // Function to toggle the chat window's visibility
     function toggleChatWindow() {
-        chatWindow.classList.toggle('active');
-        if (chatWindow.classList.contains('active')) {
-            // Reset the chat to its initial state when opened
-            chatBody.innerHTML = '<div class="bot-message">Hello! I\'m here to help with questions about our club. What would you like to know?</div>';
-            chatInputContainer.style.display = 'flex'; // Show the text input
-            userInput.value = ''; // Clear the input field
-            userInput.focus();
-        } else {
-            chatBody.innerHTML = '';
-        }
-    }
-
-    // Function to add a message to the chat body
-    function addMessage(sender, message) {
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('message');
-        if (sender === 'bot') {
-            messageElement.classList.add('bot-message');
-            messageElement.innerHTML = `<span>${message}</span>`;
-        } else {
-            messageElement.classList.add('user-message');
-            messageElement.innerHTML = `<span>${message}</span>`;
-            messageElement.style.cssText = "background-color: #007bff; color: white; padding: 10px; border-radius: 10px; align-self: flex-end; max-width: 80%;";
-        }
-        chatBody.appendChild(messageElement);
-        // Scroll to the bottom to show the latest message
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-    // New function to display a bot message with clickable options
-    function displayOptions(message, options) {
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('bot-options-message');
-        
-        const textElement = document.createElement('p');
-        textElement.textContent = message;
-        messageElement.appendChild(textElement);
-        
-        const optionsContainer = document.createElement('div');
-        optionsContainer.classList.add('chat-options');
-        
-        options.forEach(optionText => {
-            const optionBtn = document.createElement('button');
-            optionBtn.classList.add('chat-option-btn');
-            optionBtn.textContent = optionText;
-            optionBtn.dataset.question = optionText;
-            optionsContainer.appendChild(optionBtn);
-
-            optionBtn.addEventListener('click', handleOptionClick);
-        });
-
-        messageElement.appendChild(optionsContainer);
-        chatBody.appendChild(messageElement);
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-    // Function to handle a user clicking an FAQ option
-    function handleOptionClick(event) {
-        const selectedQuestion = event.target.dataset.question;
-
-        // Display the user's selected question as a chat bubble
-        addMessage('user', selectedQuestion);
-
-        // Handle special options
-        if (selectedQuestion === "ask another question") {
-            setTimeout(() => {
-                displayOptions("What else would you like to know?", optionLists.initial);
-            }, 500);
-            return;
-        } else if (selectedQuestion === "end conversation") {
-            setTimeout(() => {
-                addMessage('bot', "Thank you for chatting! Have a great day.");
-                // You could also add a delay and then close the window here
-            }, 500);
-            return;
-        }
-
-        // Get the answer from the faqs object
-        const answer = faqs[selectedQuestion];
-
-        // Display the bot's response and then the follow-up options
-        setTimeout(() => {
-            displayOptions(answer, optionLists.followUp);
-        }, 500);
-    }
-
-    // Function to handle the initial "hi" interaction
-    function sendMessage() {
-        const userQuestion = userInput.value.trim().toLowerCase();
-        if (userQuestion === "") return;
-
-        addMessage('user', userQuestion);
+      chatWindow.classList.toggle('active');
+      if (chatWindow.classList.contains('active')) {
+        chatBody.innerHTML = '<div class="bot-message">Hello! I\'m here to help with questions about our club. What would you like to know?</div>';
+        chatInputContainer.style.display = 'flex';
         userInput.value = '';
-        
-        if (userQuestion === 'hi' || userQuestion === 'hello') {
-            setTimeout(() => {
-                displayOptions("Hello! What would you like to know?", optionLists.initial);
-            }, 500);
-        } else {
-            setTimeout(() => {
-                addMessage('bot', "I'm sorry, I can only provide a list of options if you start with 'hi' or 'hello'.");
-            }, 500);
-        }
+        userInput.focus();
+      } else {
+        chatBody.innerHTML = '';
+      }
     }
 
-    // Event listeners
-    botIcon.addEventListener('click', toggleChatWindow);
-    closeBtn.addEventListener('click', toggleChatWindow);
-    sendBtn.addEventListener('click', sendMessage);
-    userInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
+    function addMessage(sender, message) {
+      const el = document.createElement('div');
+      el.classList.add('message');
+      if (sender === 'bot') {
+        el.classList.add('bot-message');
+        el.innerHTML = `<span>${message}</span>`;
+      } else {
+        el.classList.add('user-message');
+        el.innerHTML = `<span>${message}</span>`;
+        el.style.cssText = 'background-color:#0d6efd;color:white;padding:10px;border-radius:10px;align-self:flex-end;max-width:80%;';
+      }
+      chatBody.appendChild(el);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
 
-</script>
+    function displayOptions(message, options) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('bot-options-message');
 
+      const p = document.createElement('p');
+      p.textContent = message;
+      wrapper.appendChild(p);
+
+      const optionsContainer = document.createElement('div');
+      optionsContainer.classList.add('chat-options');
+
+      options.forEach(text => {
+        const btn = document.createElement('button');
+        btn.classList.add('chat-option-btn');
+        btn.textContent = text;
+        btn.dataset.question = text;
+        btn.addEventListener('click', handleOptionClick);
+        optionsContainer.appendChild(btn);
+      });
+
+      wrapper.appendChild(optionsContainer);
+      chatBody.appendChild(wrapper);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function handleOptionClick(e) {
+      const selected = e.target.dataset.question;
+      addMessage('user', selected);
+
+      if (selected === 'ask another question') {
+        setTimeout(() => displayOptions('What else would you like to know?', optionLists.initial), 300);
+        return;
+      }
+      if (selected === 'end conversation') {
+        setTimeout(() => addMessage('bot', 'Thank you for chatting! Have a great day.'), 300);
+        return;
+      }
+
+      const answer = faqs[selected] || "I don't have an answer for that yet.";
+      setTimeout(() => displayOptions(answer, optionLists.followUp), 300);
+    }
+
+    function sendMessage() {
+      const text = userInput.value.trim().toLowerCase();
+      if (!text) return;
+      addMessage('user', text);
+      userInput.value = '';
+
+      if (text === 'hi' || text === 'hello') {
+        setTimeout(() => displayOptions('Hello! What would you like to know?', optionLists.initial), 300);
+      } else {
+        setTimeout(() => addMessage('bot', "Start with 'hi' or 'hello' to see some options."), 300);
+      }
+    }
+
+    // Events
+    botIcon?.addEventListener('click', toggleChatWindow);
+    botIcon?.addEventListener('keypress', (e) => { if (e.key === 'Enter') toggleChatWindow(); });
+    closeBtn?.addEventListener('click', toggleChatWindow);
+    sendBtn?.addEventListener('click', sendMessage);
+    userInput?.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
+  </script>
 </body>
-
 </html>
+
