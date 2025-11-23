@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,28 +13,14 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
   <!-- 🌐 Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../CSE-Club-website/index.html">Computer Science & Engineering Club</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
-          <li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="../Page/teammember.html">Member</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://engage.ctstate.edu/organization/macsec" target="_blank" rel="noopener">Join Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="navbar-placeholder"></div>
 
   <!-- 🦸 Hero -->
   <header class="hero">
@@ -45,23 +32,29 @@
     </div>
   </header>
 
-<!-- 🎯 Mission -->
-<section class="section bg-white" id="mission">
-  <div class="container">
-    <h2 class="section-title text-center">Our Purpose</h2>
-    <hr />
-    <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
-      <img src="./Assets/finalmissionImg.png" alt="Mission graphic" class="rounded missionImg" width="360" height="360" />
-      <div class="d-flex flex-column align-items-center text-center text-md-start">
-        <p style="text-align: center" class="mb-3" style="max-width: 600px;">
-          The Computer Science & Engineering Club was founded to bring together students who love building, designing, and innovating with technology. We meet in Room C135 every Monday and Wednesday from 12:30 PM to 2:00 PM, where ideas quickly turn into projects. From programming with Arduino and Raspberry Pi to developing our own Unity-based game, every meeting is about learning by doing.
-          Our purpose is to create an open, collaborative space for students of all experience levels to explore computer science and engineering beyond the classroom. We encourage creativity, experimentation, and teamwork—helping members gain skills that last long after college.
-        </p>
-        <a href="Page/about.html" class="btn btn-dark mt-3">Learn More</a>
+  <!-- 🎯 Mission -->
+  <section class="section bg-white" id="mission">
+    <div class="container">
+      <h2 class="section-title text-center">Our Purpose</h2>
+      <hr />
+      <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
+        <img src="./Assets/finalmissionImg.png" alt="Mission graphic" class="rounded missionImg" width="360"
+          height="360" />
+        <div class="d-flex flex-column align-items-center text-center text-md-start">
+          <p style="text-align: center" class="mb-3" style="max-width: 600px;">
+            The Computer Science & Engineering Club was founded to bring together students who love building, designing,
+            and innovating with technology. We meet in Room C135 every Monday and Wednesday from 12:30 PM to 2:00 PM,
+            where ideas quickly turn into projects. From programming with Arduino and Raspberry Pi to developing our own
+            Unity-based game, every meeting is about learning by doing.
+            Our purpose is to create an open, collaborative space for students of all experience levels to explore
+            computer science and engineering beyond the classroom. We encourage creativity, experimentation, and
+            teamwork—helping members gain skills that last long after college.
+          </p>
+          <a href="Page/about.html" class="btn btn-dark mt-3">Learn More</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- 🛠️ Projects -->
@@ -78,7 +71,8 @@
         <div class="col-md-6 p-5">
           <h3 class="fw-bold">Arduino Car</h3>
           <p>
-            An Arduino-powered Bluetooth car that responds to joystick input from a mobile app. It features directional control,
+            An Arduino-powered Bluetooth car that responds to joystick input from a mobile app. It features directional
+            control,
             custom speed logic, and extras like horn via button commands.
           </p>
           <a href="Page/project1.html" class="btn btn-dark" target="_blank" rel="noopener">View Project</a>
@@ -95,7 +89,8 @@
         <div class="col-md-6 p-5">
           <h3 class="fw-bold">Racing Game</h3>
           <p>
-            Racing game made with unity engine. The game features multiple levels and customizable vehicles for an engaging experience.
+            Racing game made with unity engine. The game features multiple levels and customizable vehicles for an
+            engaging experience.
           </p>
           <a href="Page/project1.html" class="btn btn-dark" target="_blank" rel="noopener">View Project</a>
         </div>
@@ -112,8 +107,12 @@
         <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="Team" class="rounded aboutimage" width="360" height="240" />
         <div class="text-center text-md-start d-flex flex-column align-items-center">
           <p style="text-align: center">
-            At the CSE Club, we focus on building projects that challenge us and inspire others. Our members work on interactive web apps, AI experiments, hardware prototypes, and our ongoing Unity game project. Every semester, we brainstorm new ideas, divide into teams, and turn those ideas into working results.
-            Alongside development, we host skill-building sessions, coding discussions, and mini-workshops where members can learn something new in a supportive environment. Whether you’re interested in programming, game development, or electronics, there’s always a place to contribute and grow.
+            At the CSE Club, we focus on building projects that challenge us and inspire others. Our members work on
+            interactive web apps, AI experiments, hardware prototypes, and our ongoing Unity game project. Every
+            semester, we brainstorm new ideas, divide into teams, and turn those ideas into working results.
+            Alongside development, we host skill-building sessions, coding discussions, and mini-workshops where members
+            can learn something new in a supportive environment. Whether you’re interested in programming, game
+            development, or electronics, there’s always a place to contribute and grow.
           </p>
           <a href="Page/about.html" class="btn btn-dark mt-3">Learn More</a>
         </div>
@@ -129,53 +128,65 @@
       <hr />
 
       <!-- New responsive CSS GRID layout -->
+      <!-- New responsive CSS GRID layout -->
       <div class="team-grid">
-        <!-- Card template: duplicate and edit name/role/img as needed -->
 
-        <div class="team-card">
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img class="team-member-image" src="./Assets/daniel.jpg" alt="Daniel" />
+        <!-- Daniel -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="./Assets/daniel.jpg" alt="Daniel" />
             </div>
-            <p class="text-blk name">Daniel</p>
-            <p class="text-blk position">President</p>
-            <p class="text-blk feature-text">??</p>
+            <div class="card-back">
+              <h3>Daniel</h3>
+              <p><em>President</em></p>
+              <p>MACSEC</p>
+            </div>
           </div>
         </div>
 
-        <div class="team-card">
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img class="team-member-image" src="./Assets/Rehana.png" alt="Rehana" />
+        <!-- Rehana -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="./Assets/Rehana.png" alt="Rehana" />
             </div>
-            <p class="text-blk name">Rehana</p>
-            <p class="text-blk position">Vice President</p>
-            <p class="text-blk feature-text">??</p>
+            <div class="card-back">
+              <h3>Rehana</h3>
+              <p><em>Vice President</em></p>
+              <p>MACSEC</p>
+            </div>
           </div>
         </div>
 
-        <div class="team-card">
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img class="team-member-image" src="./Assets/dimitri.jpg" alt="Dimitri" />
+        <!-- Dimitri -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="./Assets/dimitri.jpg" alt="Dimitri" />
             </div>
-            <p class="text-blk name">Dimitri</p>
-            <p class="text-blk position">Secretary</p>
-            <p class="text-blk feature-text">??</p>
+            <div class="card-back">
+              <h3>Dimitri</h3>
+              <p><em>Secretary</em></p>
+              <p>MACSEC</p>
+            </div>
           </div>
         </div>
 
-        <div class="team-card">
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img class="team-member-image" src="./Assets/Tayena.png" alt="Tayena" />
+        <!-- Tayena -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="./Assets/Tayena.png" alt="Tayena" />
             </div>
-            <p class="text-blk name">Tayena</p>
-            <p class="text-blk position">Treasurer</p>
-            <p class="text-blk feature-text">??</p>
+            <div class="card-back">
+              <h3>Tayena</h3>
+              <p><em>Treasurer</em></p>
+              <p>MACSEC</p>
+            </div>
           </div>
         </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -200,43 +211,10 @@
   </div>
 
   <!-- 🦶 Footer -->
-  <footer class="footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start flex-wrap">
-      <div class="text-center mx-auto order-2 order-md-1">
-        <div class="footer-icons mb-3">
-          <a href="https://discord.gg/bEuBuyv87N" aria-label="Discord"><i class="fab fa-discord"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        </div>
-        <div class="footer-links mb-2">
-          <ul>
-            <li><a href="#projects">Project</a></li>
-            <li><a href="#aboutUs">About Us</a></li>
-            <li><a href="/Page/about.html">Team</a></li>
-            <li><a href="https://engage.ctstate.edu/organization/macsec" target="_blank" rel="noopener">Join Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-copy">
-          <p>&copy; 2025 Computer Science & Engineering Club. All rights reserved.</p>
-        </div>
-      </div>
-      <div class="dev-credits order-1 order-md-2 mt-4 mt-md-0">
-        <p class="fw-bold mb-2">Web Developers :</p>
-        <div class="dev-grid">
-          <p>‣ Rehana</p>
-          <p>‣ Sim</p>
-          <p>‣ Daniel</p>
-          <p>‣ Ishmael</p>
-          <p>‣ Tayena</p>
-          <p>‣ Dimitri</p>
-          <p>‣ Christina</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <!-- JS -->
+  <script src="scripts/global.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
@@ -365,5 +343,5 @@
     userInput?.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
   </script>
 </body>
-</html>
 
+</html>

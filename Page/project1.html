@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arduino Bluetooth RC Car</title>
-   <!-- CSS Stylesheets -->
-   <link rel="stylesheet" href="./style.css" />
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
- 
-   <!-- Google Fonts -->
-   <link rel="preconnect" href="https://fonts.gstatic.com" />
-   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
-   <script src="/scripts/teammember(old).js"></script>
- 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
+  <script src="/scripts/teammember(old).js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       background-color: #f9f9f9;
       font-family: "Segoe UI", sans-serif;
     }
+
     .navbar-custom {
       background-color: #2d3185;
     }
+
     .navbar-custom .nav-link,
     .navbar-custom .navbar-brand {
       color: white;
     }
+
     .navbar-toggler {
       border-color: white;
     }
+
     .hero {
       background: #222;
       color: white;
       padding: 3rem 1rem;
       text-align: center;
     }
+
     .code-block {
       background-color: #eee;
       padding: 1rem;
@@ -43,17 +49,20 @@
       font-family: monospace;
       white-space: pre-wrap;
     }
+
     .section-title {
       font-weight: bold;
       margin-top: 2rem;
       margin-bottom: 1rem;
     }
+
     .img-placeholder {
       width: 100%;
       max-height: 300px;
       object-fit: cover;
       border-radius: 8px;
     }
+
     .footer {
       background: #2d3185;
       padding: 30px 20px;
@@ -61,39 +70,47 @@
       color: white;
       text-align: center;
     }
+
     .footer-icons {
       display: flex;
       justify-content: center;
       gap: 30px;
       margin-bottom: 20px;
     }
+
     .footer-icons a {
       color: white;
       font-size: 2em;
       transition: color 0.3s;
       text-decoration: none;
     }
+
     .footer-icons a:hover {
       color: grey;
     }
+
     .footer-links ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
+
     .footer-links ul li {
       display: inline-block;
       margin: 0 15px;
     }
+
     .footer-links ul li a {
       color: white;
       text-decoration: none;
       font-size: 0.9em;
       transition: color 0.3s;
     }
+
     .footer-links ul li a:hover {
       color: grey;
     }
+
     .footer-copy {
       margin-top: 20px;
       font-size: 0.8em;
@@ -104,6 +121,7 @@
         flex-wrap: wrap;
         gap: 15px;
       }
+
       .footer-links ul li {
         display: block;
         margin: 10px 0;
@@ -111,158 +129,114 @@
     }
   </style>
 </head>
+
 <body>
 
-      <!-- 🌐 Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../CSE-Club-website/index.html">Computer Science & Engineering Club</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
-          <li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/Page/teammember.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://engage.ctstate.edu/organization/macsec" target="_blank">Join Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- 🌐 Navigation -->
+  <!-- 🌐 Navigation -->
+  <div id="navbar-placeholder"></div>
 
-<!-- 🚗 Project Title (Centered) -->
-<section class="py-4 text-center">
+  <!-- 🚗 Project Title (Centered) -->
+  <section class="py-4 text-center">
     <h1 class="fw-bold section-title">Arduino Bluetooth RC Car</h1>
     <p class="text-muted">Mobile-controlled car with sensor detection and horn</p>
-  </section>
-  
 
-  <div class="container my-4">
 
-    <!-- Overview -->
-    <section>
-      <h2 class="section-title">Project Overview</h2>
-      <p>This project is a 4-motor RC car powered by Arduino Mega and controlled via Bluetooth from an iOS app. It features real-time joystick control, a honk function, and an ultrasonic sensor for obstacle detection.</p>
-      <img src="/Assets/diagram.png" alt="Car Setup Diagram" style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
-    </section>
+    <div class="container my-4">
 
-    <!-- How it Works -->
-    <section>
-      <h2 class="section-title">How It Works</h2>
-      <ul>
-        <li><strong>Motors:</strong> Four DC motors controlled via two motor drivers (TB6612FNG).</li>
-        <li><strong>Bluetooth:</strong> Communication with an iOS app using HM-10 module.</li>
-        <li><strong>Joystick Input:</strong> X/Y values sent from the app control each side of the car.</li>
-        <li><strong>Ultrasonic Sensor:</strong> HC-SR04 checks for obstacles and activates a warning buzzer.</li>
-        <li><strong>Honk Button:</strong> Sends "A" command to trigger a non-blocking buzzer honk.</li>
-      </ul>
-      <img src="/Assets/flow.png" alt="Bluetooth Communication Flow" style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
-    </section>
+      <!-- Overview -->
+      <section>
+        <h2 class="section-title">Project Overview</h2>
+        <p>This project is a 4-motor RC car powered by Arduino Mega and controlled via Bluetooth from an iOS app. It
+          features real-time joystick control, a honk function, and an ultrasonic sensor for obstacle detection.</p>
+        <img src="/Assets/diagram.png" alt="Car Setup Diagram"
+          style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
+      </section>
 
-    <!-- Code Example -->
-    <section>
-      <h2 class="section-title">Arduino Code Snippet</h2>
-      <p>Here’s how the joystick input is received and mapped to motor speeds:</p>
-      <div class="code-block">
-void handleJoystick(String input) {
-  int commaIndex = input.indexOf(',');
-  String xStr = input.substring(0, commaIndex);
-  String yStr = input.substring(commaIndex + 1);
-  int x = xStr.toInt();
-  int y = yStr.toInt();
-  int leftSpeed = y + x;
-  int rightSpeed = y - x;
-  moveLeftMotors(map(leftSpeed, -127, 127, -255, 255));
-  moveRightMotors(map(rightSpeed, -127, 127, -255, 255));
-}
-      </div>
-    </section>
+      <!-- How it Works -->
+      <section>
+        <h2 class="section-title">How It Works</h2>
+        <ul>
+          <li><strong>Motors:</strong> Four DC motors controlled via two motor drivers (TB6612FNG).</li>
+          <li><strong>Bluetooth:</strong> Communication with an iOS app using HM-10 module.</li>
+          <li><strong>Joystick Input:</strong> X/Y values sent from the app control each side of the car.</li>
+          <li><strong>Ultrasonic Sensor:</strong> HC-SR04 checks for obstacles and activates a warning buzzer.</li>
+          <li><strong>Honk Button:</strong> Sends "A" command to trigger a non-blocking buzzer honk.</li>
+        </ul>
+        <img src="/Assets/flow.png" alt="Bluetooth Communication Flow"
+          style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
+      </section>
 
-    <!-- iOS App Overview -->
-    <section>
-      <h2 class="section-title">iOS Controller App</h2>
-      <p>The app is built in SwiftUI and includes:</p>
-      <ul>
-        <li><strong>JoystickView:</strong> A custom joystick UI that tracks drag gestures.</li>
-        <li><strong>BluetoothManager:</strong> Connects to HM-10 and sends data over BLE.</li>
-        <li><strong>ContentView:</strong> Combines joystick and a horn button in the main interface.</li>
-      </ul>
-      <img src="/Assets/IOS_App.png" alt="iOS App Screenshot" style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
-    </section>
-
-    <!-- Add Your Own Images -->
-    <section>
-      <h2 class="section-title">📷 Hardware Gallery (Replace with your own)</h2>
-      <div class="row g-3">
-        <div class="col-md-6">
-          <img src="/Assets/Driver.png" class="img-placeholder" alt="Motor Driver" />
-          <p class="text-center mt-2">Motor Driver (TB6612FNG)</p>
+      <!-- Code Example -->
+      <section>
+        <h2 class="section-title">Arduino Code Snippet</h2>
+        <p>Here’s how the joystick input is received and mapped to motor speeds:</p>
+        <div class="code-block">
+          void handleJoystick(String input) {
+          int commaIndex = input.indexOf(',');
+          String xStr = input.substring(0, commaIndex);
+          String yStr = input.substring(commaIndex + 1);
+          int x = xStr.toInt();
+          int y = yStr.toInt();
+          int leftSpeed = y + x;
+          int rightSpeed = y - x;
+          moveLeftMotors(map(leftSpeed, -127, 127, -255, 255));
+          moveRightMotors(map(rightSpeed, -127, 127, -255, 255));
+          }
         </div>
-        <div class="col-md-6">
-          <img src="/Assets/hm10.jpg" class="img-placeholder" alt="HM-10 Module" />
-          <p class="text-center mt-2">Bluetooth Module (HM-10)</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Conclusion -->
-    <section class="my-5">
-      <h2 class="section-title">What You Learn</h2>
-      <ul>
-        <li>Controlling DC motors with PWM</li>
-        <li>Using BLE for communication with mobile apps</li>
-        <li>Interfacing sensors (HC-SR04) for real-time feedback</li>
-        <li>SwiftUI + CoreBluetooth app development</li>
-      </ul>
-    </section>
+      <!-- iOS App Overview -->
+      <section>
+        <h2 class="section-title">iOS Controller App</h2>
+        <p>The app is built in SwiftUI and includes:</p>
+        <ul>
+          <li><strong>JoystickView:</strong> A custom joystick UI that tracks drag gestures.</li>
+          <li><strong>BluetoothManager:</strong> Connects to HM-10 and sends data over BLE.</li>
+          <li><strong>ContentView:</strong> Combines joystick and a horn button in the main interface.</li>
+        </ul>
+        <img src="/Assets/IOS_App.png" alt="iOS App Screenshot"
+          style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
+      </section>
 
-  </div>
+      <!-- Add Your Own Images -->
+      <section>
+        <h2 class="section-title">📷 Hardware Gallery (Replace with your own)</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <img src="/Assets/Driver.png" class="img-placeholder" alt="Motor Driver" />
+            <p class="text-center mt-2">Motor Driver (TB6612FNG)</p>
+          </div>
+          <div class="col-md-6">
+            <img src="/Assets/hm10.jpg" class="img-placeholder" alt="HM-10 Module" />
+            <p class="text-center mt-2">Bluetooth Module (HM-10)</p>
+          </div>
+        </div>
+      </section>
 
-  <footer class="footer">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start flex-wrap">
-      
-      <div class="text-center mx-auto order-2 order-md-1">
-        <div class="footer-icons mb-3">
-          <a href="https://discord.gg/bEuBuyv87N"><i class="fab fa-discord"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-tiktok"></i></a>
-        </div>
-  
-        <div class="footer-links mb-2">
-          <ul>
-            <li><a href="#">Project</a></li>
-            <li><a href="#aboutUs">About Us</a></li>
-            <li><a href="/Page/teammember.html">Team</a></li>
-            <li><a href="https://engage.ctstate.edu/organization/macsec" target="_blank">Join Us</a></li>
-          </ul>
-        </div>
-  
-        <div class="footer-copy">
-          <p>&copy; 2025 Computer Science & Engineering Club. All rights reserved.</p>
-        </div>
-      </div>
-  
-      <div class="dev-credits order-1 order-md-2 mt-4 mt-md-0">
-        <p class="fw-bold mb-2">Developers :</p>
-        <div class="dev-grid">
-          <p>‣ Rehana </p>
-          <p>‣ Sim</p>
-          <p>‣ Daniel</p>
-          <p>‣ Ishmael</p>
-          <p>‣ Tayena</p>
-          <p>‣ Dimitri</p>
-          <p>‣ Christina</p>
-        </div>
-      </div>
+      <!-- Conclusion -->
+      <section class="my-5">
+        <h2 class="section-title">What You Learn</h2>
+        <ul>
+          <li>Controlling DC motors with PWM</li>
+          <li>Using BLE for communication with mobile apps</li>
+          <li>Interfacing sensors (HC-SR04) for real-time feedback</li>
+          <li>SwiftUI + CoreBluetooth app development</li>
+        </ul>
+      </section>
+
     </div>
-  </footer>
-  
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 🦶 Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="../scripts/global.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
+
 </html>

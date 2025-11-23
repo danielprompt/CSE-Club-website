@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,7 +81,7 @@
             margin: 0;
             font-size: 18px;
         }
-        
+
         /* Close button for the chat window */
         .chat-close-btn {
             background: none;
@@ -165,7 +166,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         .chat-input input {
             flex-grow: 1;
             padding: 10px;
@@ -202,183 +203,187 @@
         .chat-body::-webkit-scrollbar-track {
             background: #f1f1f1;
         }
-
     </style>
 </head>
+
 <body>
 
-<div class="faq-bot-icon" id="faq-bot-icon">
-    <img src="../Assets/hokage.png" alt="FAQ Bot logo"> 
-</div>
-
-<div class="faq-chat-window" id="faq-chat-window">
-    <div class="chat-header">
-        <h3>Helper Hokage</h3>
-        <button class="chat-close-btn" id="chat-close-btn">&times;</button>
-    </div>
-    <div class="chat-body" id="chat-body">
-        <div class="bot-message">Hello! I'm here to help with questions about our club. What would you like to know?</div>
-    </div>
-    
-    <div class="chat-input" id="chat-input-container">
-        <input type="text" id="user-input" placeholder="Say 'hi' to begin..." autocomplete="off">
-        <button id="send-btn">Send</button>
+    <div class="faq-bot-icon" id="faq-bot-icon">
+        <img src="../Assets/hokage.png" alt="FAQ Bot logo">
     </div>
 
-</div>
+    <div class="faq-chat-window" id="faq-chat-window">
+        <div class="chat-header">
+            <h3>Helper Hokage</h3>
+            <button class="chat-close-btn" id="chat-close-btn">&times;</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="bot-message">Hello! I'm here to help with questions about our club. What would you like to know?
+            </div>
+        </div>
 
-<script>
-    // Get all the elements we need
-    const botIcon = document.getElementById('faq-bot-icon');
-    const chatWindow = document.getElementById('faq-chat-window');
-    const closeBtn = document.getElementById('chat-close-btn');
-    const sendBtn = document.getElementById('send-btn');
-    const userInput = document.getElementById('user-input');
-    const chatBody = document.getElementById('chat-body');
-    const chatInputContainer = document.getElementById('chat-input-container');
+        <div class="chat-input" id="chat-input-container">
+            <input type="text" id="user-input" placeholder="Say 'hi' to begin..." autocomplete="off">
+            <button id="send-btn">Send</button>
+        </div>
 
-    // Sample FAQ data with questions as keys and answers as values
-    const faqs = {
-        "what are your hours": "Our club is open from 12:30pm to 2:00pm, Mondays and Wednesdays.",
-        "where are you located": "During the hours of 12:30pm to 2:00pm, we are located in the A121, in the library.",
-        "how do i join the club": "You can join by simply clicking the 'join us' on the header, to be directed to the engage website request page.",
-        "what events are coming up": "No events at the moment, but stay tuned! We will be announcing events soon.",
-        "what is the membership fee": "No membership fee required, just ensure that you are homed at the Manchester Campus and have a gpa above 2.5."
-    };
+    </div>
 
-    // This data structure defines the options that will be displayed
-    const optionLists = {
-        initial: [
-            "what are your hours",
-            "where are you located",
-            "how do i join the club",
-            "what events are coming up",
-            "what is the membership fee"
-        ],
-        followUp: [
-            "ask another question",
-            "end conversation"
-        ]
-    };
+    <script>
+        // Get all the elements we need
+        const botIcon = document.getElementById('faq-bot-icon');
+        const chatWindow = document.getElementById('faq-chat-window');
+        const closeBtn = document.getElementById('chat-close-btn');
+        const sendBtn = document.getElementById('send-btn');
+        const userInput = document.getElementById('user-input');
+        const chatBody = document.getElementById('chat-body');
+        const chatInputContainer = document.getElementById('chat-input-container');
 
-    // Function to toggle the chat window's visibility
-    function toggleChatWindow() {
-        chatWindow.classList.toggle('active');
-        if (chatWindow.classList.contains('active')) {
-            // Reset the chat to its initial state when opened
-            chatBody.innerHTML = '<div class="bot-message">Hello! I\'m here to help with questions about our club. What would you like to know?</div>';
-            chatInputContainer.style.display = 'flex'; // Show the text input
-            userInput.value = ''; // Clear the input field
-            userInput.focus();
-        } else {
-            chatBody.innerHTML = '';
+        // Sample FAQ data with questions as keys and answers as values
+        const faqs = {
+            "what are your hours": "Our club is open from 12:30pm to 2:00pm, Mondays and Wednesdays.",
+            "where are you located": "During the hours of 12:30pm to 2:00pm, we are located in the A121, in the library.",
+            "how do i join the club": "You can join by simply clicking the 'join us' on the header, to be directed to the engage website request page.",
+            "what events are coming up": "No events at the moment, but stay tuned! We will be announcing events soon.",
+            "what is the membership fee": "No membership fee required, just ensure that you are homed at the Manchester Campus and have a gpa above 2.5."
+        };
+
+        // This data structure defines the options that will be displayed
+        const optionLists = {
+            initial: [
+                "what are your hours",
+                "where are you located",
+                "how do i join the club",
+                "what events are coming up",
+                "what is the membership fee"
+            ],
+            followUp: [
+                "ask another question",
+                "end conversation"
+            ]
+        };
+
+        // Function to toggle the chat window's visibility
+        function toggleChatWindow() {
+            chatWindow.classList.toggle('active');
+            if (chatWindow.classList.contains('active')) {
+                // Reset the chat to its initial state when opened
+                chatBody.innerHTML = '<div class="bot-message">Hello! I\'m here to help with questions about our club. What would you like to know?</div>';
+                chatInputContainer.style.display = 'flex'; // Show the text input
+                userInput.value = ''; // Clear the input field
+                userInput.focus();
+            } else {
+                chatBody.innerHTML = '';
+            }
         }
-    }
 
-    // Function to add a message to the chat body
-    function addMessage(sender, message) {
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('message');
-        if (sender === 'bot') {
-            messageElement.classList.add('bot-message');
-            messageElement.innerHTML = `<span>${message}</span>`;
-        } else {
-            messageElement.classList.add('user-message');
-            messageElement.innerHTML = `<span>${message}</span>`;
-            messageElement.style.cssText = "background-color: #007bff; color: white; padding: 10px; border-radius: 10px; align-self: flex-end; max-width: 80%;";
+        // Function to add a message to the chat body
+        function addMessage(sender, message) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            if (sender === 'bot') {
+                messageElement.classList.add('bot-message');
+                messageElement.innerHTML = `<span>${message}</span>`;
+            } else {
+                messageElement.classList.add('user-message');
+                messageElement.innerHTML = `<span>${message}</span>`;
+                messageElement.style.cssText = "background-color: #007bff; color: white; padding: 10px; border-radius: 10px; align-self: flex-end; max-width: 80%;";
+            }
+            chatBody.appendChild(messageElement);
+            // Scroll to the bottom to show the latest message
+            chatBody.scrollTop = chatBody.scrollHeight;
         }
-        chatBody.appendChild(messageElement);
-        // Scroll to the bottom to show the latest message
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
 
-    // New function to display a bot message with clickable options
-    function displayOptions(message, options) {
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('bot-options-message');
-        
-        const textElement = document.createElement('p');
-        textElement.textContent = message;
-        messageElement.appendChild(textElement);
-        
-        const optionsContainer = document.createElement('div');
-        optionsContainer.classList.add('chat-options');
-        
-        options.forEach(optionText => {
-            const optionBtn = document.createElement('button');
-            optionBtn.classList.add('chat-option-btn');
-            optionBtn.textContent = optionText;
-            optionBtn.dataset.question = optionText;
-            optionsContainer.appendChild(optionBtn);
+        // New function to display a bot message with clickable options
+        function displayOptions(message, options) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('bot-options-message');
 
-            optionBtn.addEventListener('click', handleOptionClick);
+            const textElement = document.createElement('p');
+            textElement.textContent = message;
+            messageElement.appendChild(textElement);
+
+            const optionsContainer = document.createElement('div');
+            optionsContainer.classList.add('chat-options');
+
+            options.forEach(optionText => {
+                const optionBtn = document.createElement('button');
+                optionBtn.classList.add('chat-option-btn');
+                optionBtn.textContent = optionText;
+                optionBtn.dataset.question = optionText;
+                optionsContainer.appendChild(optionBtn);
+
+                optionBtn.addEventListener('click', handleOptionClick);
+            });
+
+            messageElement.appendChild(optionsContainer);
+            chatBody.appendChild(messageElement);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        // Function to handle a user clicking an FAQ option
+        function handleOptionClick(event) {
+            const selectedQuestion = event.target.dataset.question;
+
+            // Display the user's selected question as a chat bubble
+            addMessage('user', selectedQuestion);
+
+            // Handle special options
+            if (selectedQuestion === "ask another question") {
+                setTimeout(() => {
+                    displayOptions("What else would you like to know?", optionLists.initial);
+                }, 500);
+                return;
+            } else if (selectedQuestion === "end conversation") {
+                setTimeout(() => {
+                    addMessage('bot', "Thank you for chatting! Have a great day.");
+                    // You could also add a delay and then close the window here
+                }, 500);
+                return;
+            }
+
+            // Get the answer from the faqs object
+            const answer = faqs[selectedQuestion];
+
+            // Display the bot's response and then the follow-up options
+            setTimeout(() => {
+                displayOptions(answer, optionLists.followUp);
+            }, 500);
+        }
+
+        // Function to handle the initial "hi" interaction
+        function sendMessage() {
+            const userQuestion = userInput.value.trim().toLowerCase();
+            if (userQuestion === "") return;
+
+            addMessage('user', userQuestion);
+            userInput.value = '';
+
+            if (userQuestion === 'hi' || userQuestion === 'hello') {
+                setTimeout(() => {
+                    displayOptions("Hello! What would you like to know?", optionLists.initial);
+                }, 500);
+            } else {
+                setTimeout(() => {
+                    addMessage('bot', "I'm sorry, I can only provide a list of options if you start with 'hi' or 'hello'.");
+                }, 500);
+            }
+        }
+
+        // Event listeners
+        botIcon.addEventListener('click', toggleChatWindow);
+        closeBtn.addEventListener('click', toggleChatWindow);
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
         });
 
-        messageElement.appendChild(optionsContainer);
-        chatBody.appendChild(messageElement);
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
+    </script>
 
-    // Function to handle a user clicking an FAQ option
-    function handleOptionClick(event) {
-        const selectedQuestion = event.target.dataset.question;
-
-        // Display the user's selected question as a chat bubble
-        addMessage('user', selectedQuestion);
-
-        // Handle special options
-        if (selectedQuestion === "ask another question") {
-            setTimeout(() => {
-                displayOptions("What else would you like to know?", optionLists.initial);
-            }, 500);
-            return;
-        } else if (selectedQuestion === "end conversation") {
-            setTimeout(() => {
-                addMessage('bot', "Thank you for chatting! Have a great day.");
-                // You could also add a delay and then close the window here
-            }, 500);
-            return;
-        }
-
-        // Get the answer from the faqs object
-        const answer = faqs[selectedQuestion];
-
-        // Display the bot's response and then the follow-up options
-        setTimeout(() => {
-            displayOptions(answer, optionLists.followUp);
-        }, 500);
-    }
-
-    // Function to handle the initial "hi" interaction
-    function sendMessage() {
-        const userQuestion = userInput.value.trim().toLowerCase();
-        if (userQuestion === "") return;
-
-        addMessage('user', userQuestion);
-        userInput.value = '';
-        
-        if (userQuestion === 'hi' || userQuestion === 'hello') {
-            setTimeout(() => {
-                displayOptions("Hello! What would you like to know?", optionLists.initial);
-            }, 500);
-        } else {
-            setTimeout(() => {
-                addMessage('bot', "I'm sorry, I can only provide a list of options if you start with 'hi' or 'hello'.");
-            }, 500);
-        }
-    }
-
-    // Event listeners
-    botIcon.addEventListener('click', toggleChatWindow);
-    closeBtn.addEventListener('click', toggleChatWindow);
-    sendBtn.addEventListener('click', sendMessage);
-    userInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
-
-</script>
-
+    <div id="footer-placeholder"></div>
+    <script src="../scripts/global.js"></script>
 </body>
+
 </html>

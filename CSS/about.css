@@ -1,35 +1,38 @@
 .officer-title {
-    text-align: center;
+  text-align: center;
 }
 
 /* 🌐 Navbar Styling */
 .navbar-custom {
-    background-color: #2d3185;
-  }
-  .navbar-custom .nav-link,
-  .navbar-custom .navbar-brand {
-    color: white;
-  }
-  .navbar-toggler {
-    border-color: white;
-  }
+  background-color: #2d3185;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+  color: white;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
 
 .contact {
-    text-align: center;
+  text-align: center;
 }
 
 
-.historysize
-{
-  width: 380px;
+.historysize {
+  width: 100%;
+  max-width: 380px;
   height: auto;
 }
 
-.purposesize
-{
-  width: 300px;
+.purposesize {
+  width: 100%;
+  max-width: 300px;
   height: auto;
 }
+
 /* Officer Section */
 .officer-row {
   display: flex;
@@ -59,67 +62,3 @@
 .more {
   margin-left: 50%
 }
-
-/* 🦶 Footer */
-.footer {
-    background: #2d3185;
-    padding: 30px 20px;
-    font-family: 'Play', sans-serif;
-    color: white;
-    text-align: center;
-  }
-  
-  /* 📱 Footer Social Media Icons */
-  .footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
-  }
-  .footer-icons a {
-    color: white;
-    font-size: 2em;
-    transition: color 0.3s;
-    text-decoration: none;
-  }
-  .footer-icons a:hover {
-    color: grey;
-  }
-  
-  /* 🧭 Footer Navigation Links */
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .footer-links ul li {
-    display: inline-block;
-    margin: 0 15px;
-  }
-  .footer-links ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9em;
-    transition: color 0.3s;
-  }
-  .footer-links ul li a:hover {
-    color: grey;
-  }
-  
-  /* © Copyright Text */
-  .footer-copy {
-    margin-top: 20px;
-    font-size: 0.8em;
-  }
-  
-  /* 📱 Responsive Footer */
-  @media (max-width: 720px) {
-    .footer-icons {
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    .footer-links ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  }
