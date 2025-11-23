@@ -32,91 +32,75 @@
     </div>
   </header>
 
-  <!-- 🎯 Mission -->
-  <section class="section bg-white" id="mission">
+  <!-- 🎯 About Us (Merged Purpose & What We Do) -->
+  <section class="section bg-white" id="about">
     <div class="container">
-      <h2 class="section-title text-center">Our Purpose</h2>
-      <hr />
-      <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
-        <img src="./Assets/finalmissionImg.png" alt="Mission graphic" class="rounded missionImg" width="360"
-          height="360" />
-        <div class="d-flex flex-column align-items-center text-center text-md-start">
-          <p style="text-align: center" class="mb-3" style="max-width: 600px;">
-            The Computer Science & Engineering Club was founded to bring together students who love building, designing,
-            and innovating with technology. We meet in Room C135 every Monday and Wednesday from 12:30 PM to 2:00 PM,
-            where ideas quickly turn into projects. From programming with Arduino and Raspberry Pi to developing our own
-            Unity-based game, every meeting is about learning by doing.
-            Our purpose is to create an open, collaborative space for students of all experience levels to explore
-            computer science and engineering beyond the classroom. We encourage creativity, experimentation, and
-            teamwork—helping members gain skills that last long after college.
+      <h2 class="section-title text-center" data-animate="fade-in-up">About Us</h2>
+      <div class="row align-items-center mt-5">
+        <div class="col-md-6" data-animate="fade-in-up">
+          <img src="./Assets/finalmissionImg.png" alt="Club Collaboration" class="img-fluid rounded shadow-lg" />
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0" data-animate="fade-in-up">
+          <h3 class="fw-bold mb-3" style="color: var(--brand);">Innovate. Create. Collaborate.</h3>
+          <p class="lead text-muted">
+            The Computer Science & Engineering Club is a hub for students who love to build and explore technology.
           </p>
-          <a href="Page/about.html" class="btn btn-dark mt-3">Learn More</a>
+          <p>
+            We meet in <strong>Room C135 every Monday and Wednesday from 12:30 PM to 2:00 PM</strong>.
+            Whether you're into coding, robotics, game dev, or AI, this is the place to turn ideas into reality.
+            We host workshops, build collaborative projects, and support each other in learning skills that go beyond
+            the classroom.
+          </p>
+          <a href="Page/about.html" class="btn btn-primary btn-lg mt-3"
+            style="background-color: var(--brand); border: none;">Learn More</a>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- 🛠️ Projects -->
   <section class="section bg-light" id="projects">
-    <div class="container px-0">
-      <h2 class="section-title text-center">Projects</h2>
-      <hr />
-
-      <!-- Project 1 -->
-      <div class="row align-items-center g-0" style="min-height:60vh;">
-        <div class="col-md-6">
-          <img src="/Assets/car.jpg" alt="Arduino Car" class="img-fluid w-75 h-75 object-fit-cover" />
-        </div>
-        <div class="col-md-6 p-5">
-          <h3 class="fw-bold">Arduino Car</h3>
-          <p>
-            An Arduino-powered Bluetooth car that responds to joystick input from a mobile app. It features directional
-            control,
-            custom speed logic, and extras like horn via button commands.
-          </p>
-          <a href="Page/project1.html" class="btn btn-dark" target="_blank" rel="noopener">View Project</a>
-        </div>
-      </div>
-
-      <hr />
-
-      <!-- Project 2 -->
-      <div class="row align-items-center g-0" style="min-height:60vh;">
-        <div class="col-md-6">
-          <img src="" alt="Racing game" class="img-fluid w-75 h-75 object-fit-cover" />
-        </div>
-        <div class="col-md-6 p-5">
-          <h3 class="fw-bold">Racing Game</h3>
-          <p>
-            Racing game made with unity engine. The game features multiple levels and customizable vehicles for an
-            engaging experience.
-          </p>
-          <a href="Page/project1.html" class="btn btn-dark" target="_blank" rel="noopener">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 👥 About Us -->
-  <section class="section bg-white" id="aboutUs">
     <div class="container">
-      <h2 class="section-title text-center">What We Do</h2>
-      <hr />
-      <div class="d-flex flex-column flex-md-row align-items-center gap-4 mt-4 zigzag">
-        <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="Team" class="rounded aboutimage" width="360" height="240" />
-        <div class="text-center text-md-start d-flex flex-column align-items-center">
-          <p style="text-align: center">
-            At the CSE Club, we focus on building projects that challenge us and inspire others. Our members work on
-            interactive web apps, AI experiments, hardware prototypes, and our ongoing Unity game project. Every
-            semester, we brainstorm new ideas, divide into teams, and turn those ideas into working results.
-            Alongside development, we host skill-building sessions, coding discussions, and mini-workshops where members
-            can learn something new in a supportive environment. Whether you’re interested in programming, game
-            development, or electronics, there’s always a place to contribute and grow.
-          </p>
-          <a href="Page/about.html" class="btn btn-dark mt-3">Learn More</a>
+      <h2 class="section-title text-center" data-animate="fade-in-up">Our Projects</h2>
+      <p class="text-center text-muted mb-5" data-animate="fade-in-up">Check out what we've been working on.</p>
+
+      <div class="row g-4">
+        <!-- Project 1: Arduino Car -->
+        <div class="col-md-6" data-animate="fade-in-up">
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img src="/Assets/car.jpg" alt="Arduino Car" />
+            </div>
+            <div class="project-content">
+              <h3>Arduino Bluetooth Car</h3>
+              <p>
+                A custom-built remote-controlled car powered by Arduino. Features include Bluetooth connectivity for
+                mobile control,
+                obstacle avoidance sensors, and a custom chassis design.
+              </p>
+              <a href="Page/project1.html" class="btn btn-outline-dark stretched-link">View Project</a>
+            </div>
+          </div>
         </div>
 
+        <!-- Project 2: Racing Game -->
+        <div class="col-md-6" data-animate="fade-in-up">
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <!-- Placeholder for Racing Game Image -->
+              <img src="https://placehold.co/600x400/2d3185/FFF?text=Racing+Game+Preview" alt="Racing Game" />
+            </div>
+            <div class="project-content">
+              <h3>Unity Racing Game</h3>
+              <p>
+                A high-octane multiplayer racing game developed in Unity. Includes custom physics, multiple track
+                designs,
+                and vehicle customization options. Currently in active development.
+              </p>
+              <a href="Page/project1.html" class="btn btn-outline-dark stretched-link">View Project</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -127,7 +111,6 @@
       <h2 class="section-title text-center">Executives</h2>
       <hr />
 
-      <!-- New responsive CSS GRID layout -->
       <!-- New responsive CSS GRID layout -->
       <div class="team-grid">
 
@@ -215,6 +198,7 @@
 
   <!-- JS -->
   <script src="scripts/global.js"></script>
+  <script src="scripts/animations.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>

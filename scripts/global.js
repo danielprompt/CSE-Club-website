@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (navbarPlaceholder) {
     // Use absolute path since we are running on a server
     const navbarPath = "/components/navbar.html";
-    console.log("Fetching navbar from:", navbarPath);
+    // Debug log removed
 
     fetch(navbarPath)
       .then((response) => {
