@@ -82,7 +82,7 @@ body {
   background-image: url('Assets/IMG_5464.JPG');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .hero::before {
