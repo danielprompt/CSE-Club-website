@@ -1,0 +1,64 @@
+.officer-title {
+  text-align: center;
+}
+
+/* 🌐 Navbar Styling */
+.navbar-custom {
+  background-color: #2d3185;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+  color: white;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.contact {
+  text-align: center;
+}
+
+
+.historysize {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.purposesize {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* Officer Section */
+.officer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.officer-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.4s;
+  border-radius: 10px;
+  background-color: white;
+  max-width: 150px;
+}
+
+#officer-img {
+  border-radius: 10px 10px 0 0;
+}
+
+.officer-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.more {
+  margin-left: 50%
+}

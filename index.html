@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSE Club</title>
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- 🌐 Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Computer Science & Engineering Club</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="Page/teammember.html">Members</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://engage.ctstate.edu/organization/macsec"
+              target="_blank" rel="noopener">Join Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🦸 Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center position-relative hero-banner" id="hero-banner">
+      <button class="hero-dismiss" id="hero-dismiss" aria-label="Hide intro">&times;</button>
+      <div class="club-title-elegant" data-animate="fade-in-up">
+        <h1>Computer Science</h1>
+        <h1>&</h1>
+        <h1>Engineering</h1>
+        <h1>Club</h1>
+      </div>
+      <p class="hero-subtitle" data-animate="fade-in-up">
+        A creative space for builders, makers, and problem solvers at CT State.
+      </p>
+      <div class="hero-actions" data-animate="fade-in-up">
+        <a href="#projects" class="btn btn-light btn-lg hero-btn-primary">
+          Explore Projects
+        </a>
+        <a href="https://engage.ctstate.edu/organization/macsec" target="_blank" rel="noopener"
+          class="btn btn-outline-light btn-lg hero-btn-secondary">
+          Join the Club
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🎯 About Us (Merged Purpose & What We Do) -->
+  <section class="section bg-white" id="about">
+    <div class="container">
+      <h2 class="section-title text-center" data-animate="fade-in-up">About Us</h2>
+      <div class="row align-items-center mt-5">
+        <div class="col-md-6" data-animate="fade-in-up">
+          <img src="./Assets/finalmissionImg.png" alt="Club Collaboration" class="img-fluid rounded shadow-lg" />
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0" data-animate="fade-in-up">
+          <h3 class="fw-bold mb-3" style="color: var(--brand);">Innovate. Create. Collaborate.</h3>
+          <p class="lead text-muted">
+            The Computer Science & Engineering Club is a hub for students who love to build and explore technology.
+          </p>
+          <p>
+            We meet in <strong>Room C135 every Monday and Wednesday from 12:30 PM to 2:00 PM</strong>.
+            Whether you're into coding, robotics, game dev, or AI, this is the place to turn ideas into reality.
+            We host workshops, build collaborative projects, and support each other in learning skills that go beyond
+            the classroom.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🛠️ Projects -->
+  <section class="section bg-light" id="projects">
+    <div class="container">
+      <h2 class="section-title text-center" data-animate="fade-in-up">Our Projects</h2>
+      <p class="text-center text-muted mb-5" data-animate="fade-in-up">Check out what we've been working on.</p>
+
+      <div class="row g-4">
+        <!-- Project 1: Arduino Car -->
+        <div class="col-md-6" data-animate="fade-in-up">
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img src="./Assets/car.jpg" alt="Arduino Car" />
+            </div>
+            <div class="project-content">
+              <h3>Arduino Bluetooth Car</h3>
+              <p>
+                A custom-built remote-controlled car powered by Arduino. Features include Bluetooth connectivity for
+                mobile control,
+                obstacle avoidance sensors, and a custom chassis design.
+              </p>
+              <a href="Page/project1.html" class="btn btn-outline-dark stretched-link">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Racing Game -->
+        <div class="col-md-6" data-animate="fade-in-up">
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <!-- Placeholder for Racing Game Image -->
+              <img src="./Assets/car.jpg" alt="Racing Game" />
+            </div>
+            <div class="project-content">
+              <h3>Unity Racing Game</h3>
+              <p>
+                A high-octane multiplayer racing game developed in Unity. Includes custom physics, multiple track
+                designs,
+                and vehicle customization options. Currently in active development.
+              </p>
+              <a href="Page/project1.html" class="btn btn-outline-dark stretched-link">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 👩‍💻 Team (cards grid) -->
+  <section class="section bg-white" id="team">
+    <div class="container">
+      <h2 class="section-title text-center">Executives</h2>
+      <hr />
+
+      <!-- New responsive CSS GRID layout -->
+      <div class="team-grid">
+
+        <!-- Daniel -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front" data-name="Daniel">
+              <img src="./Assets/daniel.jpg" alt="Daniel" />
+            </div>
+            <div class="card-back">
+              <h3>Daniel</h3>
+              <p><em>President</em></p>
+              <p>MACSEC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rehana -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front" data-name="Rehana">
+              <img src="./Assets/Rehana.png" alt="Rehana" />
+            </div>
+            <div class="card-back">
+              <h3>Rehana</h3>
+              <p><em>Vice President</em></p>
+              <p>MACSEC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dimitri -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front" data-name="Dimitri">
+              <img src="./Assets/dimitri.jpg" alt="Dimitri" />
+            </div>
+            <div class="card-back">
+              <h3>Dimitri</h3>
+              <p><em>Secretary</em></p>
+              <p>MACSEC</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tayena -->
+        <div class="card-flip">
+          <div class="card-inner">
+            <div class="card-front" data-name="Tayena">
+              <img src="./Assets/Tayena.png" alt="Tayena" />
+            </div>
+            <div class="card-back">
+              <h3>Tayena</h3>
+              <p><em>Member</em></p>
+              <p>MACSEC</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🤖 FAQ Bot -->
+  <div class="faq-bot-icon" id="faq-bot-icon" aria-label="Open Helper Hokage chat" role="button" tabindex="0">
+    <img src="./Assets/hokage.png" alt="FAQ Bot logo" />
+  </div>
+
+  <div class="faq-chat-window" id="faq-chat-window" aria-live="polite">
+    <div class="chat-header">
+      <h3 class="m-0">Helper Hokage</h3>
+      <button class="chat-close-btn" id="chat-close-btn" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-message">Hello! I'm here to help with questions about our club. What would you like to know?</div>
+    </div>
+    <div class="chat-input" id="chat-input-container">
+      <input type="text" id="user-input" placeholder="Say 'hi' to begin..." autocomplete="off" />
+      <button id="send-btn" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+
+  <!-- 🦶 Footer -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start flex-wrap">
+      <div class="text-center mx-auto order-2 order-md-1">
+        <div class="footer-icons mb-3">
+          <a href="https://discord.gg/bEuBuyv87N" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-links mb-2">
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="Page/teammember.html">Team</a></li>
+            <li><a href="https://engage.ctstate.edu/organization/macsec" target="_blank" rel="noopener">Join
+                Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2025 Computer Science & Engineering Club. All rights reserved.</p>
+        </div>
+      </div>
+      <div class="dev-credits order-1 order-md-2 mt-4 mt-md-0">
+        <p class="fw-bold mb-2">Web Developers :</p>
+        <div class="dev-grid">
+          <p>‣ Rehana</p>
+          <p>‣ Sim</p>
+          <p>‣ Daniel</p>
+          <p>‣ Ishmael</p>
+          <p>‣ Tayena</p>
+          <p>‣ Dimitri</p>
+          <p>‣ Christine</p>
+          <p>‣ Serena</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="scripts/hero.js"></script>
+  <script src="scripts/animations.js"></script>
+  <script src="scripts/chat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
