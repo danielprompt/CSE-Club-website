@@ -14,10 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
-  <body>
+<body>
 
   <!-- 🌐 Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
@@ -40,96 +39,243 @@
     </div>
   </nav>
 
-  <!-- 🚗 Project Title (Centered) -->
-  <section class="py-4 text-center project-hero">
-    <h1 class="fw-bold section-title" style="color: white; margin-bottom: 0;">Arduino Bluetooth RC Car</h1>
-    <p class="text-muted">Mobile-controlled car with sensor detection and horn</p>
+  <!-- 🚗 Project Hero -->
+  <header class="project-hero">
+    <div class="container">
+      <nav class="project-breadcrumb" aria-label="breadcrumb">
+        <a href="../index.html#projects">Projects</a>
+        <span aria-hidden="true">/</span>
+        <span>Arduino Bluetooth RC Car</span>
+      </nav>
 
+      <h1 class="project-title">Arduino Bluetooth RC Car</h1>
+      <p class="project-subtitle">
+        An Arduino Mega powered RC car controlled from an iOS app over Bluetooth—built with responsive driving,
+        obstacle awareness, and a horn feature.
+      </p>
 
-    <div class="container my-4">
-
-      <!-- Overview -->
-      <section>
-        <h2 class="section-title">Project Overview</h2>
-        <p>This project is a 4-motor RC car powered by Arduino Mega and controlled via Bluetooth from an iOS app. It
-          features real-time joystick control, a honk function, and an ultrasonic sensor for obstacle detection.</p>
-        <img src="../Assets/diagram.png" alt="Car Setup Diagram"
-          style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
-      </section>
-
-      <!-- How it Works -->
-      <section>
-        <h2 class="section-title">How It Works</h2>
-        <ul>
-          <li><strong>Motors:</strong> Four DC motors controlled via two motor drivers (TB6612FNG).</li>
-          <li><strong>Bluetooth:</strong> Communication with an iOS app using HM-10 module.</li>
-          <li><strong>Joystick Input:</strong> X/Y values sent from the app control each side of the car.</li>
-          <li><strong>Ultrasonic Sensor:</strong> HC-SR04 checks for obstacles and activates a warning buzzer.</li>
-          <li><strong>Honk Button:</strong> Sends "A" command to trigger a non-blocking buzzer honk.</li>
-        </ul>
-        <img src="../Assets/flow.png" alt="Bluetooth Communication Flow"
-          style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
-      </section>
-
-      <!-- Code Example -->
-      <section>
-        <h2 class="section-title">Arduino Code Snippet</h2>
-        <p>Here’s how the joystick input is received and mapped to motor speeds:</p>
-        <div class="code-block">
-          void handleJoystick(String input) {
-          int commaIndex = input.indexOf(',');
-          String xStr = input.substring(0, commaIndex);
-          String yStr = input.substring(commaIndex + 1);
-          int x = xStr.toInt();
-          int y = yStr.toInt();
-          int leftSpeed = y + x;
-          int rightSpeed = y - x;
-          moveLeftMotors(map(leftSpeed, -127, 127, -255, 255));
-          moveRightMotors(map(rightSpeed, -127, 127, -255, 255));
-          }
-        </div>
-      </section>
-
-      <!-- iOS App Overview -->
-      <section>
-        <h2 class="section-title">iOS Controller App</h2>
-        <p>The app is built in SwiftUI and includes:</p>
-        <ul>
-          <li><strong>JoystickView:</strong> A custom joystick UI that tracks drag gestures.</li>
-          <li><strong>BluetoothManager:</strong> Connects to HM-10 and sends data over BLE.</li>
-          <li><strong>ContentView:</strong> Combines joystick and a horn button in the main interface.</li>
-        </ul>
-        <img src="../Assets/IOS_App.png" alt="iOS App Screenshot"
-          style="width: 100%; max-height: 300px; object-fit: contain;" class="img-placeholder mt-3" />
-      </section>
-
-      <!-- Add Your Own Images -->
-      <section>
-        <h2 class="section-title">📷 Hardware Gallery (Replace with your own)</h2>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <img src="../Assets/Driver.png" class="img-placeholder" alt="Motor Driver" />
-            <p class="text-center mt-2">Motor Driver (TB6612FNG)</p>
-          </div>
-          <div class="col-md-6">
-            <img src="../Assets/hm10.jpg" class="img-placeholder" alt="HM-10 Module" />
-            <p class="text-center mt-2">Bluetooth Module (HM-10)</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Conclusion -->
-      <section class="my-5">
-        <h2 class="section-title">What You Learn</h2>
-        <ul>
-          <li>Controlling DC motors with PWM</li>
-          <li>Using BLE for communication with mobile apps</li>
-          <li>Interfacing sensors (HC-SR04) for real-time feedback</li>
-          <li>SwiftUI + CoreBluetooth app development</li>
-        </ul>
-      </section>
-
+      <div class="project-meta" aria-label="Project tags">
+        <span class="project-tag">Arduino Mega</span>
+        <span class="project-tag">TB6612FNG</span>
+        <span class="project-tag">HM-10 (BLE)</span>
+        <span class="project-tag">HC-SR04</span>
+        <span class="project-tag">SwiftUI</span>
+      </div>
     </div>
+  </header>
+
+  <main>
+    <!-- Overview -->
+    <section class="section bg-transparent">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7">
+            <h2 class="section-title" data-animate="fade-in-up">Project overview</h2>
+            <p class="text-muted mt-3" data-animate="fade-in-up">
+              This project started as a simple goal: build a reliable RC car that feels good to drive from a phone.
+              The final result combines real-time joystick control, a clean command protocol, and basic safety feedback
+              through distance sensing.
+            </p>
+
+            <div class="row g-3 mt-3" data-animate="fade-in-up">
+              <div class="col-md-6">
+                <div class="info-card">
+                  <h3>What it does</h3>
+                  <p>Drive forward/back, steer with a joystick, honk, and react to obstacles.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-card">
+                  <h3>Why it matters</h3>
+                  <p>It’s a great intro to embedded control + mobile UI working together.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-animate="fade-in-up">
+            <div class="media-card">
+              <div class="media-placeholder" role="img" aria-label="Project photo placeholder">
+                Add a main project photo here
+              </div>
+              <div class="media-caption">You can replace this with your best build photo later.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section bg-white">
+      <div class="container">
+        <h2 class="section-title text-center" data-animate="fade-in-up">How it works</h2>
+        <p class="text-center text-muted mt-3" data-animate="fade-in-up">
+          The car is split into small modules—motors, Bluetooth, sensing—so each part is easy to test and improve.
+        </p>
+
+        <div class="row g-3 mt-4">
+          <div class="col-md-6 col-lg-4" data-animate="fade-in-up">
+            <div class="info-card">
+              <h3>Motor control</h3>
+              <p>Two TB6612FNG drivers handle direction and PWM speed for four motors.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-animate="fade-in-up">
+            <div class="info-card">
+              <h3>Bluetooth link</h3>
+              <p>The HM-10 receives joystick values and button commands from the iOS app.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-animate="fade-in-up">
+            <div class="info-card">
+              <h3>Obstacle awareness</h3>
+              <p>An HC-SR04 reads distance and triggers a warning buzzer when close.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2 align-items-start">
+          <div class="col-lg-6" data-animate="fade-in-up">
+            <div class="media-card">
+              <div class="media-placeholder" role="img" aria-label="Wiring diagram placeholder">
+                Add wiring / setup diagram here
+              </div>
+              <div class="media-caption">Wiring diagram / setup</div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-animate="fade-in-up">
+            <div class="media-card">
+              <div class="media-placeholder" role="img" aria-label="Communication flow placeholder">
+                Add Bluetooth flow / architecture here
+              </div>
+              <div class="media-caption">Bluetooth communication flow</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code snippet -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5" data-animate="fade-in-up">
+            <h2 class="section-title">Code highlight</h2>
+            <p class="text-muted mt-3">
+              This snippet shows the basic idea: parse the joystick input, compute left/right values, and map them to
+              motor speed.
+            </p>
+          </div>
+          <div class="col-lg-7" data-animate="fade-in-up">
+            <pre class="code-block"><code>void handleJoystick(String input) {
+  int commaIndex = input.indexOf(',');
+  String xStr = input.substring(0, commaIndex);
+  String yStr = input.substring(commaIndex + 1);
+
+  int x = xStr.toInt();
+  int y = yStr.toInt();
+
+  int leftSpeed = y + x;
+  int rightSpeed = y - x;
+
+  moveLeftMotors(map(leftSpeed, -127, 127, -255, 255));
+  moveRightMotors(map(rightSpeed, -127, 127, -255, 255));
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- iOS app -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6" data-animate="fade-in-up">
+            <h2 class="section-title">iOS controller app</h2>
+            <p class="text-muted mt-3">
+              The controller is built in SwiftUI. The goal is simple: low-latency input and a clean Bluetooth
+              connection flow.
+            </p>
+            <ul class="mt-3">
+              <li><strong>JoystickView:</strong> tracks drag gestures and outputs X/Y values.</li>
+              <li><strong>BluetoothManager:</strong> manages connection and sends commands.</li>
+              <li><strong>ContentView:</strong> combines joystick + horn control.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6" data-animate="fade-in-up">
+            <div class="media-card">
+              <div class="media-placeholder" role="img" aria-label="iOS app screenshot placeholder">
+                Add iOS app screenshot here
+              </div>
+              <div class="media-caption">Controller UI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hardware gallery placeholders -->
+    <section class="section bg-transparent">
+      <div class="container">
+        <h2 class="section-title text-center" data-animate="fade-in-up">Hardware gallery</h2>
+        <p class="text-center text-muted mt-3" data-animate="fade-in-up">
+          Add photos as you go—drivers, modules, chassis, wiring, test runs.
+        </p>
+
+        <div class="row g-3 mt-4">
+          <div class="col-md-6" data-animate="fade-in-up">
+            <div class="media-card">
+              <div class="media-placeholder" role="img" aria-label="Motor driver placeholder">
+                Motor driver photo
+              </div>
+              <div class="media-caption">TB6612FNG motor driver</div>
+            </div>
+          </div>
+          <div class="col-md-6" data-animate="fade-in-up">
+            <div class="media-card">
+              <div class="media-placeholder" role="img" aria-label="Bluetooth module placeholder">
+                Bluetooth module photo
+              </div>
+              <div class="media-caption">HM-10 Bluetooth module</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you learn -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title text-center" data-animate="fade-in-up">What you learn</h2>
+        <div class="row g-3 mt-4">
+          <div class="col-md-6 col-lg-3" data-animate="fade-in-up">
+            <div class="info-card">
+              <h3>PWM control</h3>
+              <p>Drive DC motors smoothly with PWM + direction pins.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-animate="fade-in-up">
+            <div class="info-card">
+              <h3>Bluetooth basics</h3>
+              <p>Send commands reliably from a mobile UI to embedded hardware.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-animate="fade-in-up">
+            <div class="info-card">
+              <h3>Sensors</h3>
+              <p>Use distance readings for feedback and simple safety checks.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3" data-animate="fade-in-up">
+            <div class="info-card">
+              <h3>UI + hardware</h3>
+              <p>Connect gestures, state, and control loops end-to-end.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
     <!-- 🦶 Footer -->
     <footer class="footer mt-5">
@@ -171,11 +317,8 @@
     </footer>
 
     <!-- JS -->
-
-
+    <script src="../scripts/animations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </body>
 
 </html>
